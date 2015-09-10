@@ -1,0 +1,203 @@
+.mainfooter{
+
+	.foot-top{
+		@include box-sizing(border-box);
+		padding: 45px 40px 35px 35px;
+		background: url(assets/img/bg-pattern.png) repeat;
+		@extend %table;
+		.foot-col{
+			&:last-child{
+				text-align: right;
+			}
+		}
+		h3{
+			margin-bottom: 40px;
+		}
+
+
+	}
+
+	.foot-col{
+		display: inline-block;
+		vertical-align: top;
+		width: 25%;
+		color: #ffffff;
+		h3{
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+		p,a{
+			font-size: 14px;
+			line-height: 1.3;
+			@include transition(color $time);
+
+			&:hover {
+				color: darken(#fff, 15%);
+			}
+		}
+		
+	}
+
+	.foot-logo{
+		display: inline-block;
+		margin-bottom: 30px;
+		@include transition(all $time);
+		&:hover{
+			@include opacity(.8);
+		}
+	}
+	.stat{
+		width: 168px;
+		text-align: left;
+		float: right;
+		.spoil-trigg {
+			font-size: 14px;
+			position: relative;
+			margin-right: 16px;
+			display: inline-block;
+			cursor: pointer;
+			&:before{
+				@extend %before;
+				@extend %vam;
+				// margin-top: 2px;//jan.27
+				position: absolute;
+				right: -16px;
+				background-position: -600px -129px;
+				width: 9px;
+				height: 6px;
+			}
+		}
+		.spoil-wrap {
+			margin-top: 15px;
+			a {
+				display: inline-block;
+			}
+		}
+	}
+	.foot-menu{
+		li{
+			font-size: 14px;
+			color: #ffffff;
+			padding-left: 18px;
+			margin-bottom: 15px;
+			position: relative;
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			&:before{
+				@extend %before;
+				@include border-radius(50%);
+				background: #ffffff;
+				left: 0;
+				top: 5px;
+				width: 5px;
+				height: 5px;
+				position: absolute;
+			}
+
+			a{
+				border-bottom: 1px solid transparent;
+				@include transition(border $time);
+				&:hover{
+					border-color: #ffffff;
+				}
+			}
+		}
+	}
+
+}
+
+.socials-list{
+	width: 195px;
+	@extend %table;
+	.soc-item{
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 10px;
+		margin-bottom: 20px;
+		&:nth-child(4n+4){
+			margin-right: 0;
+		}
+		a{
+			display: block;
+			@include border-radius(50%);
+			border: 2px solid #ffffff;
+			width: 36px;
+			height: 36px;
+			position: relative;
+			@include transition(all $time);
+			&:before{
+				@extend %before;
+				@extend %cam;
+
+			}
+			&:hover{
+				@include opacity(.8);
+				@include border-radius(35%);
+			}
+		}
+
+		&.is-apple a:before{
+			background-position:  -599px -5px;
+			width: 17px;
+			height: 20px;
+		}
+		&.is-android a:before{
+			background-position:  -629px -5px;
+			width: 17px;
+			height: 20px;
+		}
+		&.is-gp a:before{
+			background-position:  -657px -7px;
+			width: 19px;
+			height: 20px;
+		}
+		&.is-fb a:before{
+			background-position:  -686px -9px;
+			width: 8px;
+			height: 15px;
+		}
+		&.is-tw a:before{
+			background-position:  -599px -37px;
+			width: 19px;
+			height: 14px;
+		}
+		&.is-vk a:before{
+			background-position:  -632px -38px;
+			width: 11px;
+			height: 13px;
+		}
+		&.is-yt a:before{
+			background-position:  -657px -36px;
+			width: 17px;
+			height: 21px;
+		}
+		&.is-ok a:before{
+			background-position:  -686px -34px;
+			width: 12px;
+			height: 19px;
+		}
+	}
+}
+
+.decollete{
+	background-position: -577px -70px;
+	width: 122px;
+	height: 20px;
+	float: right;
+	@include transition(all $time);
+	&:hover{
+		@include opacity(.8);
+	}
+}
+
+.foot-bottom{
+	background: #000000;
+	padding: 20px 40px 20px 35px;
+	@extend %table;
+	h3{
+		position: relative;
+		top: 4px;
+	}
+}

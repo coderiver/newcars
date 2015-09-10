@@ -1,0 +1,269 @@
+.btn-grey{
+	@extend %btn;
+	color: #fff;
+	font-size: 18px;
+	background: #484848;
+	@include border-radius(3px);
+	padding: 10px 33px;
+	&:hover{
+		@include opacity(.8);
+	}
+}
+
+
+.btn-share{
+	@extend %btn;
+	color: #477fb3;
+	font-size: 14px;
+	border: 1px solid #477fb3;
+	@include border-radius(4px);
+	@include transition(opacity $time);
+	padding: 5px 15px 5px 38px;
+	&:before{
+		@extend %before;
+		@extend %vam;
+		left: 8px;
+		position: absolute;
+		background-position: -711px -81px;
+		width: 17px;
+		height: 11px;
+	}
+	&:hover{
+		@include opacity(.8);
+	}
+}
+
+.btn-red{
+	@extend %btn;
+	background: $red_color;
+	color: #ffffff;
+	padding: 12px 22px;
+	font-size: 16px;
+	@include border-radius(2px);
+	&:hover{
+		// @include opacity(.8);//jan.27
+		background: darken($red_color, 5%);
+	}
+
+	&.btn-big{
+		padding: 17px 95px;
+		font-size: 22px;
+		@include text-shadow(0 1px 1px rgba(0,0,0,.1));
+	}
+}
+
+.btn-red-transparent{
+	@extend %btn;
+	border: 1px solid $red_color;
+	color: $red_color;
+	font-size: 14px;
+	padding: 14px 19px;
+	&:hover{
+		color: #ffffff;
+		background: $red_color;
+	}
+}
+
+.icon-search{
+	background-position: -561px -24px;
+	width: 20px;
+	height: 20px;
+	display: block;
+	border: none;
+	cursor: pointer;
+	@include transition(opacity $time);
+	&:hover{
+		@include opacity(.8);
+	}
+}
+
+.icon-dbcar{
+	background-position: -518px 0;
+	width: 28px;
+	height: 18px;
+	display: block;
+}
+
+.icon-check-red{
+	display: block;
+	background-position: -632px -107px;
+	width: 25px;
+	height: 25px;
+}
+
+.simp-input{
+	color: #212121;
+	font-family:$font;
+	font-size: 16px;
+	border: 1px solid #ececec;
+	padding: 15px 16px 15px 16px;
+	@include transition (all .3s);
+	display: inline-block;
+	vertical-align: middle;
+	@include box-sizing(border-box);
+	@include placeholder(#bcbcbc);
+}
+
+.icon-close{
+	width: 18px;
+	height: 18px;
+	@include border-radius(50%);
+	cursor: pointer;
+	background: #c6c6c6;
+	display: block;
+	position: relative;
+	&:before{
+		@extend %before;
+		@extend %cam;
+		background-position: -616px -129px;
+		width: 8px;
+		height: 7px;
+	}
+	&:hover{
+		@include opacity(.8);
+	}
+}
+
+.icon-car{
+	width: 20px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+
+	&:before {
+		@extend %before;
+		// background-position: -973px -30px;
+		background-position: -599px -106px;
+		@include transition(opacity $time);
+		width: 20px;
+		height: 16px;
+	}
+
+	&:after {
+		@extend %before;
+		background-position: -518px -28px;
+		@include opacity(0);
+		@include transition(opacity $time);
+		width: 20px;
+		height: 16px;
+	}
+
+	&.green{
+		&:before {
+			background-position: -518px -28px;
+		}
+	}
+	&.black{
+		&:before {
+			background-position: -973px -30px;
+		}
+	}
+	&.red{
+		&:before {
+			background-position: -947px -30px;
+		}
+	}
+	&.grey{
+		&:before {
+			background-position: -599px -106px;
+		}
+	}
+
+	&:hover {
+
+		&:before {
+			@include opacity(0);
+		}
+		&:after {
+			@include opacity(1);
+		}
+	}
+}
+.tabs-container{
+	position: relative;
+}
+
+.sort_by{
+	position: relative;
+	cursor: pointer;
+
+	&.sorted-col{
+		color: $bluefont;
+		&:before{
+			border-bottom:5px solid $bluefont;
+		}
+	}
+	&:before{
+		@extend %before;
+		top: 5px;
+		right: 5px;
+		@include transition(all $time);
+		border-bottom: 5px solid #000000;
+		border-left: 3px solid transparent;
+		border-right: 3px solid transparent;
+	}
+	&.desc{
+		&:before{
+			@include transform(rotate(180deg));
+		}
+	}
+}
+
+.change-view{
+	// position: relative;//jan.28
+	right: 25px; //jan.28
+	position: absolute;
+	z-index: 3;
+	top: -55px;
+
+	.chv-btn{
+		display: inline-block;
+		margin-left: 10px;
+		@include transition(opacity $time);
+		width: 18px;
+		height: 18px;
+		float: right;
+		&:hover{
+			@include opacity(.8);
+		}
+		&.chv-btn-list{
+			background-position: -973px -3px;
+		}
+		&.chv-btn-tile{
+			background-position: -948px -3px;
+		}
+	}
+
+	& + .complect-tbl{
+		top: -30px;
+		position: relative;
+	}
+}
+
+.tag{
+	@include border-radius(2px);
+	color: #fff;
+	font-size: 11px;
+	padding: 5px 9px;
+	background: #484848;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 6px;
+	&.tag-orange{
+		background: #f60;
+	}
+	&.tag-green{
+		background: #390;
+	}
+	&.tag-red{
+		background: $red_color;
+	}
+}
+
+.icon-tip{
+	background-position: -1180px -43px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+}

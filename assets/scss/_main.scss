@@ -1,0 +1,671 @@
+.maincontainer{
+	padding: 30px 25px 40px;//jan30
+	// padding: 10px 25px 40px;
+	background: #ffffff;
+}
+
+.filters-block{
+	background: $greybg_color;
+	border: 3px solid #b2b2b2;
+	padding: 13px 10px;
+	@include box-sizing(border-box);
+	@include transition(all .35s);
+//	min-height: 156px;
+	max-height: 500px;
+
+	.filters-submit{
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+
+		.btn-red{
+			margin-left: 0;
+		}
+
+		.fs-link{
+			font-size: 15px;
+			position: absolute;
+			bottom: -29px;
+			left: 0;
+			a{
+				// color: $bluefont;//jan.27
+				color:$basefont_color;
+				// border-bottom: 1px solid $bluefont; //jan.27
+				// border-bottom: 1px dotted $basefont_color; //feb6
+				border-bottom: 1px solid $basefont_color;
+				@include transition(border $time);
+				&:hover{
+					border-bottom-color: transparent;
+				}
+			}
+		}
+	}
+
+
+	.spoil{
+		margin-top: 13px;
+		margin-bottom: 4px;
+
+		.filters-row{
+			// padding: 40px 0 12px; //jan.27
+			padding: 22px 0 12px;
+		}
+	}
+
+	&.hidden{
+		max-height: 0;
+		overflow: hidden;
+		padding: 0;
+		border-color: #ffffff;
+	}
+
+}
+
+.filters-row{
+	.de-select{
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+.filters-nav{
+	margin-bottom: 18px;
+	height: 24px;
+	li{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 14px;
+		@include transition(all $time);
+		a{
+			text-transform: uppercase;
+			display: block;
+			position: relative;
+			font-size: 12px;
+			border-bottom: 1px dotted $basefont_color;
+			@include transition(all $time);
+			&:hover{
+				border-color: transparent;
+			}
+		}
+
+		&.active{
+			a{
+				padding: 6px 17px;
+				background: $red_color;
+				@include border-radius(2px);
+				color: #ffffff;
+				border-bottom: none;
+				&:before{
+					@extend %before;
+					@extend %ham;
+					position: absolute;
+					border-top: 5px solid $red_color;
+					border-left: 4px solid transparent;
+					border-right: 4px solid transparent;
+					bottom: -5px;
+				}
+			}
+		}
+	}
+}
+
+.section{
+	padding-bottom: 60px;
+	h3{
+		color: #212121;
+		font-size: 25px;
+		margin-bottom:35px;
+		margin-top: 35px;
+	}
+	&.sect-bott-shadow.sect-bott-shadow.sect-bott-shadow{
+		padding-bottom: 13px;
+		position: relative;
+		&:before{
+			@extend %before;
+			@extend %ham;
+			background: url("assets/img/bottom-shadow-small.png") no-repeat;
+			width: 974px;
+			height: 13px;
+			position: absolute;
+			bottom: 0px;
+		}
+	}
+}
+
+
+.cars-brands-block{
+	position: relative;
+	width: 1266px;
+	margin: auto;
+	padding-bottom: 60px;
+	text-align: center;
+
+	&:before{
+		@extend %before;
+		@extend %ham;
+		position: absolute;
+		background: url(assets/img/bottom-shadow.png) no-repeat;
+		width: 1266px;
+		height: 13px;
+		bottom: -13px;
+	}
+}
+
+.home-slider{
+	margin: auto;
+	margin-bottom: 90px;
+	height: 646px;
+	overflow:hidden ;
+
+}
+
+.sh-item{
+	position: relative;
+	height: 646px !important;
+	width: 1350px !important;
+	overflow:hidden ;
+	.tag{
+		position: absolute;
+		top: 18px;
+		left: 16px;
+	}
+}
+
+
+.modelrow-head{
+	margin-bottom: 30px;
+	img{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 16px;
+	}
+	h3{
+		margin-bottom: 0;
+		margin-top: 0;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 30px;
+	}
+	span{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 30px;
+		font-size: 16px;
+		color: #a3a3a3;
+		a{
+			color: $bluefont;
+			@include transition(border $time);
+			border-bottom:1px solid transparent;
+			&:hover{
+				border-color: $bluefont;
+			}
+		}
+	}
+	.to-compare-link{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 30px;
+	}
+	.btn-red{
+		font-size: 14px;
+		padding: 10px 20px;
+	}
+}
+
+
+.model-description{
+	border: 1px solid #e3e3e3;
+	@include box-sizing(border-box);
+	padding: 30px 20px;
+}
+.model-desc-content{
+	img{
+		display: inline-block;
+		margin-right: 50px;
+		vertical-align: top;
+	}
+	.mdc-item{
+		width: 320px;
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 35px;
+		&:last-child{
+			width: 200px;
+		}
+
+		.lbl{
+			color: #212121;
+			font-size: 16px;
+			display: block;
+			margin-bottom: 5px;
+			margin-top: 25px;
+		}
+
+		.price{
+			display: block;
+			color: #000;
+			font-size: 25px;
+		}
+
+		.colors{
+			li{
+				display: inline-block;
+				vertical-align: top;
+				width: 20px;
+				height: 20px;
+				margin-right: 4px;
+				&.col-border{
+					width: 20px;
+					height: 20px;
+					border: 1px solid #e0e0e0;
+				}
+			}
+		}
+	}
+}
+
+.rate-block{
+	margin-top: 12px;
+	span{
+		display: inline-block;
+		vertical-align: middle;
+		color: #a1a1a1;
+		font-size: 14px;
+	}
+	a{
+		color: #212121;
+		// font-size: 14px;
+		// border-bottom: 1px dotted #212121;
+		border-bottom: 1px dotted transparent;
+		@include transition(border $time);
+		display: inline-block;
+		vertical-align: middle;
+		&:hover{
+			border-color: transparent;
+			span {
+				color: $bluefont;
+			}
+		}
+	}
+}
+
+
+.gallery-video{
+	width: 940px;
+	.slick-slider{
+		margin-bottom: 0px;
+	}
+	.main-sl{
+		margin-bottom: 20px;
+
+		.slick-prev{
+			left: -17px;
+			&:hover{
+				left: -22px;
+			}
+		}
+		.slick-next{
+			right: -17px;
+			&:hover{
+				right: -22px;
+			}
+		}
+	}
+}
+.main-sl-item{
+	img{
+		width: 100%;
+	}
+	&.video{
+		position: relative;
+
+		// &:before{
+		// 	@extend %before;
+		// 	@extend %cam;
+		// 	background-position: -797px 0;
+		// 	width: 132px;
+		// 	height: 151px;
+		// 	@include transition(transform $time);
+
+		// }
+		// &:hover{
+		// 	&:before{
+
+		// 	}
+		// }
+	}
+}
+.nav-sl-item{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+	position: relative;
+	&:after{
+		@extend %before;
+		position: absolute;
+		@extend %fullsize;
+		background: rgba(255,255,255,.4);
+		z-index: 2;
+		@include transition(all $time);
+	}
+	&:hover{
+		&:after{
+			display: none;
+		}
+	}
+	&.slick-center{
+		&.video{
+			&:before{
+				display: block;
+			}
+		}
+
+		&:after{
+			display: none;
+		}
+	}
+
+	&.video{
+		&:before{
+			@extend %before;
+			@extend %cam;
+			background-position: -743px -57px;
+			width: 45px;
+			height: 53px;
+			display: none;
+			@include transition(all $time);
+		}
+	}
+}
+
+.nav-sl{
+	.slick-track{
+		margin-left: -120px;
+	}
+}
+
+
+.modif-block{
+	.model-description.model-description.model-description{
+//		border-bottom: none;
+		h3{
+			padding-left: 0;
+		}
+		.lbl{
+			// color: $bluefont;//feb2
+			color: #212121;
+		}
+
+		.de-select-filter{
+			width: 270px;
+			margin-top: 25px;
+			dt{
+				// padding-top: 12px;
+				// padding-bottom: 12px;
+			}
+		}
+	}
+	.where-buy.where-buy.where-buy{
+//		border-top: none;
+		margin-left: 0;
+		width: 100%;
+		padding-top: 30px;
+
+		h3{
+			padding-left: 0;
+		}
+		.wb-head{
+			padding-top: 0;
+		}
+	}
+}
+
+
+.searchresult-item{
+	border: 1px solid #e3e3e3;
+	margin-bottom: 30px;
+
+	.sres-head{
+		border-bottom: 1px solid #e3e3e3;
+		padding: 20px 25px;
+		@include box-sizing(border-box);
+		.car-img{
+			display: inline-block;
+			vertical-align: top;
+			width: 215px;
+		}
+	}
+
+	.sres-head-content.sres-head-content.sres-head-content{
+		width: 750px;
+		display: inline-block;
+		vertical-align: top;
+		h3{
+			margin-top: 5px;
+			margin-bottom: 5px;
+			padding-left: 0;
+			a{
+				@include transition(color $time);
+				&:hover{
+					// color: $red_color;
+					color: $bluefont;
+				}
+			}
+		}
+		.shc-left{
+			float: left;
+		}
+		.shc-right{
+			float: right;
+		}
+
+		.to-compare-link{
+			margin-right: 15px;
+		}
+
+		.share-block{
+			margin-right: 15px;
+		}
+		.rate-block{
+			margin-top: 0;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.price{
+			color: #000;
+			font-size: 25px;
+			display: inline-block;
+			padding: 5px 0;
+		}
+	}
+}
+
+.sres-spoil{
+	.spoil-head{
+		padding: 10px 25px;
+		a{
+			color: $bluefont;
+			font-size: 14px;
+			border-bottom: 1px dotted $bluefont;
+			@include transition(border $time);
+			margin-left: 25px;
+			display: inline-block;
+			position: relative;
+			&:hover{
+				border-bottom-color: transparent;
+			}
+
+			&:before{
+				// content: '+';
+				content: '';
+				width: 18px;
+				height: 18px;
+				@include border-radius(9px);
+				background-color: $red_color;
+				position: absolute;
+				left: -25px;
+				@extend %vam;
+				color: #ffffff;
+				font-size: 14px;
+				@include box-sizing(border-box);
+				text-align: center;
+				font-family: arial, Helvetica, sans-serif;
+				padding: 1px 0px;
+			}
+			&:after {
+				@extend %before;
+				background-position: -669px -11px;
+				width: 20px;
+				height: 10px;
+				left: -20px;
+				top: 1px;
+			}
+		}
+
+	}
+
+
+	&.open{
+		.spoil-head{
+			a{
+				border-bottom-color: transparent;
+				&:before{
+					content: '-';
+				}
+				&:after {
+					@extend %before;
+					background-position: -669px -16px;
+					width: 20px;
+					height: 2px;
+					left: -20px;
+					top: 6px;
+				}
+			}
+		}
+
+	}
+}
+
+.sres-items-list{
+	.sres-item{
+		border-top: 1px solid #e3e3e3;
+
+		.sres-item-col{
+			@include box-sizing(border-box);
+			width: 50%;
+			display: inline-block;
+			vertical-align: top;
+			&:first-child{
+				border-right: 1px solid #e3e3e3;
+				padding: 30px 25px;
+			}
+
+
+			h5{
+				color: #212121;
+				font-size: 18px;
+				margin-bottom: 5px;
+				a{
+					@include transition(border $time);
+					color: $bluefont;
+					&:hover{
+						// color: $red_color;
+						// color: $bluefont;
+						border-bottom: solid 1px $bluefont;
+					}
+				}
+			}
+
+			.car-desc{
+				color: #000;
+				font-size: 14px;
+				line-height: 1.2;
+			}
+
+
+			table{
+				width: 100%;
+				margin-left: -1px;
+				border-left: 1px solid #e3e3e3;
+				tr{
+					td{
+						height: 44px;
+						vertical-align: middle;
+						border-bottom: 1px solid #e3e3e3;
+						color: #000;
+						font-size: 16px;
+						.icon-car{
+							margin-right: 9px;
+						}
+						.car-name{
+							display: inline-block;
+							vertical-align: middle;
+							@include transition(border $time);
+							border-bottom: solid 1px transparent;
+							color: $bluefont;
+
+							&:hover {
+								border-bottom: solid 1px $bluefont;
+							}
+
+						}
+						&:first-child{
+							padding-left: 25px;
+						}
+						&:last-child{
+							text-align: right;
+							padding-right: 25px;
+							.price{
+								display: inline-block;
+								vertical-align: middle;
+								margin-left: 10px;
+								font-size: 20px;
+							}
+							.year{
+								display: inline-block;
+								vertical-align: bottom;
+								color: #999;
+								font-size: 16px;
+
+							}
+						}
+					}
+					&:last-child{
+						td{
+							border-bottom: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

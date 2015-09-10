@@ -1,0 +1,48 @@
+/*!
+ * -------------------------------------
+ * Theme Name: Autocentre
+ * Theme URI: http://decollete.com.ua/
+ * Author: Decollete Team
+ * Author URI: http://decollete.com.ua/
+ * Description: Custom wp theme special for Autocentre
+ * Version: 1.0
+ * -------------------------------------
+ */
+
+
+//	Compass Start
+@import "compass";
+@import "compass/css3";
+@import "compass/layout";
+@import "compass/css3/user-interface";
+
+
+
+// Base Style
+@import "base/fonts";		// шрифты
+@import "base/variables";	// переменные
+@import "base/mixin";		// миксины
+@import "base/function";	// функции
+@import "base/extend";		// расширения
+@import "base/sprite";		// спрайт
+@import "base/grid";		// сетка
+@import "base/reset";		// сетка
+
+@import "slick";
+@import "scrollpane";
+
+//	Autocentre Style
+@import "some";			    // стили основные-всякие
+@import "header";		    // стили шапки
+@import "footer";		    // стили футера
+@import "sidebar";		    // стили виджетов сайдбара
+@import "btnsIcons";
+@import "osx"; // styles for Mac OS X
+@import "ivan";
+@import "main";
+@import "brend";
+
+//@import "post";		  // стили всех постов
+
+
+

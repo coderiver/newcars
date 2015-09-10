@@ -1,0 +1,36 @@
+.brend_page{
+	position: relative;
+	.brend-link{
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		@extend %fullsize;
+		display: block;
+	}
+
+	.maincontainer{
+//		margin-top: 100px;
+	}
+
+
+
+
+
+
+}
+.brend-part{
+	position: relative;
+	height: 100px;
+	width: 1400px;
+	margin: auto;
+	a{
+		@extend %fullsize;
+	}
+}
+.mainheader-bottom, .head-search-form{
+	margin: auto;
+	width: 1400px;
+}
+.head-search-form{
+	left: 50%;
+	margin-left: -700px;
+}

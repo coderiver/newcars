@@ -1,0 +1,157 @@
+//	Post Excerpt
+
+.post-excerpt {
+  position: relative;
+
+  a {
+    display: block;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    @include border-radius(5px);
+  }
+
+  figure {
+    display: block;
+
+    img {
+      display: block;
+      @include border-radius(5px 5px 6px 6px);
+    }
+  }
+
+  header {
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    padding: 15px;
+    color: basecolor(1);
+    @include transition(bottom $time, background-color $time ease-in-out $time);
+
+    h3 {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    time {
+      position: absolute;
+      display: block;
+      top: 17px;
+      right: 15px;
+      font-size: 14px;
+      color: basecolor(.75);
+    }
+
+  }
+
+  &.grid-3 {
+    figure {
+      min-height: 250px;
+    }
+    header {
+      bottom: -45px;
+
+      h3 {
+        margin-bottom: 15px;
+        padding-right: 50px;
+      }
+
+      aside {
+        height: 30px;
+        font-size: 14px;
+        overflow: hidden;
+        line-height: 1.1;
+      }
+    }
+  }
+
+  &:hover {
+    header {
+      bottom: 0;
+      background-color: $bgcolor;
+    }
+  }
+
+}
+
+.excerpt-meta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+
+  span {
+    position: absolute;
+    display: block;
+
+    img {
+      display: block;
+    }
+
+    &.time-cook {
+      width: 75px;
+      height: 75px;
+      top: -15px;
+      left: -15px;
+      text-align: center;
+      font-family: $fontBold;
+      font-size: 22px;
+      color: #fff;
+      padding-top: 20px;
+      background-position: -268px -1px;
+
+      ins {
+        display: block;
+        text-align: center;
+        font-size: 13px;
+        text-decoration: none;
+      }
+    }
+
+    &.recipe-author {
+      top: 65px;
+      right: -10px;
+
+    }
+
+    &.project-tag {
+      top: 20px;
+      right: -10px;
+    }
+
+  }
+}
+
+.load-more {
+  display: block;
+  position: relative;
+  margin: 20px 0 30px;
+  color: basecolor(1);
+  @include transition(color $time);
+
+  &:hover {
+    color: $hovercolor;
+  }
+
+  &:before {
+    @extend %before;
+    height: 1px;
+    background-color: basecolor(.1);
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+  }
+
+  span {
+    display: inline-block;
+    background-color: #f6f6f6;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+}

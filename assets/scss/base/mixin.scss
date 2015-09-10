@@ -1,0 +1,32 @@
+
+@mixin clearfix {
+	zoom:1;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+}
+
+@mixin bp($value){
+	background-position:$value;
+}
+
+@mixin placeholder($color){
+	&::-webkit-input-placeholder { color:$color;}
+	&::-moz-placeholder { color:$color; } /* firefox 19+ */
+	&:-ms-input-placeholder { color:$color; } /* ie */
+	&:-moz-placeholder { color:$color; }
+}
+
+@mixin columns($count, $gap){
+	-webkit-column-count: $count;
+	-moz-column-count:    $count;
+	column-count:         $count;
+
+	-webkit-column-gap:   $gap;
+	-moz-column-gap:      $gap;
+	column-gap:           $gap;
+}
