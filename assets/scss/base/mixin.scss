@@ -30,3 +30,67 @@
 	-moz-column-gap:      $gap;
 	column-gap:           $gap;
 }
+
+// responsive
+$b-320: 320px;
+$b-360: 360px;
+$b-480: 480px;
+$b-568: 568px;
+$b-600: 600px;
+$b-640: 640px;
+$b-760: 760px;
+$b-768: 768px;
+$b-800: 800px;
+$b-900: 900px;
+$b-960: 960px;
+$b-1024: 1024px;
+$b-1280: 1280px;
+$b-1400: 1400px;
+$break-large: 1920px;
+@mixin respond-to($media) {
+	@if $media == 320 {
+    	@media only screen and (max-width: $b-320) { @content; }
+	}
+	@if $media == 360 {
+    	@media only screen and (max-width: $b-360) { @content; }
+	}
+	@if $media == 480 {
+    	@media only screen and (max-width: $b-480) { @content; }
+	}
+	@if $media == 568 {
+    	@media only screen and (max-width: $b-568) { @content; }
+	}
+	@if $media == 600 {
+    	@media only screen and (max-width: $b-600) { @content; }
+	}
+	@if $media == 640 {
+    	@media only screen and (max-width: $b-640) { @content; }
+	}
+	@if $media == 760 {
+    	@media only screen and (max-width: $b-760) { @content; }
+	}
+	@if $media == 768 {
+    	@media only screen and (max-width: $b-768) { @content; }
+	}
+	@if $media == 800 {
+    	@media only screen and (max-width: $b-800) { @content; }
+	}
+	@if $media == 900 {
+    	@media only screen and (max-width: $b-900) { @content; }
+	}
+	@if $media == 960 {
+    	@media only screen and (max-width: $b-960) { @content; }
+	}
+	@if $media == 1024 {
+		@media only screen and (max-width: $b-1024) { @content; }
+	}
+	@if $media == 1280 {
+		@media only screen and (max-width: $b-1280) { @content; }
+	}
+	@if $media == 1400 {
+		@media only screen and (max-width: $b-1400) { @content; }
+	}
+	@else if $media == wide {
+		@media only screen and (min-width: $break-large) { @content; }
+	}
+}

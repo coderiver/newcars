@@ -351,21 +351,6 @@
 		margin-right: 10px !important;
 	}
 
-	// .de-select-filter {
-	// 	dt {
-	// 		padding: 0;
-	// 		border: none;
-	// 	}
-	// 	dd {
-	// 		padding: 7px 0 0;
-	// 		border: none;
-
-	// 		a {
-	// 			font-size: 16px;
-	// 		}
-	// 	}
-	// }
-
 	.params-search-header {
 		padding-left: 48px;
 
@@ -376,7 +361,6 @@
 		}
 	}
 	.params-checkbox-row {
-		// height: 27px; feb2
 		height: auto;
 		margin-bottom: 40px;
 
@@ -1111,9 +1095,7 @@
 	height: 46px;
 	position: fixed;
 	bottom: 60px;
-	// left: 50%;
 	right: 0;
-	margin-left: 550px;
 	z-index: 1000;
 	background: rgba(255,255,255,0.5);
 	@include transition(background $time);
@@ -1332,14 +1314,14 @@
 	top: -35px;
 }
 
-.filters-row {
-	@extend %table;
-	&.small {
-		.de-select-filter {
-			width: 250px;
-		}
-	}
-}
+// .filters-row {
+// 	@extend %table;
+// 	&.small {
+// 		.de-select-filter {
+// 			width: 250px;
+// 		}
+// 	}
+// }
 
 .maincontainer {
 	header {
@@ -1362,7 +1344,6 @@
 		.prs-from,
 		.prs-to {
 			vertical-align: top;
-			// margin-left: 20px;
 		}
 		.from,
 		.to {
@@ -1383,10 +1364,12 @@
 		}
 	}
 	&.huge {
-		width: 260px !important;
 		.from,
 		.to {
 			width: 105px;
+			@include respond-to(1024){
+				width: 50%;
+			}
 		}
 	}
 	&.normal {

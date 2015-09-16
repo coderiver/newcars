@@ -1,7 +1,9 @@
 .maincontainer{
-	padding: 30px 25px 40px;//jan30
-	// padding: 10px 25px 40px;
-	background: #ffffff;
+	padding: 30px 25px 40px;
+	background: #fff;
+	@include respond-to(1024) {
+		padding: 20px 13px 30px;  
+	}
 }
 
 .filters-block{
@@ -10,13 +12,25 @@
 	padding: 13px 10px;
 	@include box-sizing(border-box);
 	@include transition(all .35s);
-//	min-height: 156px;
-	max-height: 500px;
+	@include respond-to(760){
+		margin-bottom: 20px; 
+	}
 
 	.filters-submit{
 		display: inline-block;
 		vertical-align: middle;
 		position: relative;
+		
+		@include respond-to(1400) {
+			float: right;
+			width: 24%; 
+		}
+		@include respond-to(960) {
+			width: 32.3%; 
+		}
+		@include respond-to(568) {
+			width: 100%; 
+		}
 
 		.btn-red{
 			margin-left: 0;
@@ -27,11 +41,20 @@
 			position: absolute;
 			bottom: -29px;
 			left: 0;
+			@include respond-to(1400) {
+				bottom: -32px; 
+			}
+			@include respond-to(1024) {
+					bottom: -28px;
+				small {
+					display: none;
+				}
+			}
+			@include respond-to(568) {
+				bottom: -20px;
+			}
 			a{
-				// color: $bluefont;//jan.27
 				color:$basefont_color;
-				// border-bottom: 1px solid $bluefont; //jan.27
-				// border-bottom: 1px dotted $basefont_color; //feb6
 				border-bottom: 1px solid $basefont_color;
 				@include transition(border $time);
 				&:hover{
@@ -45,9 +68,11 @@
 	.spoil{
 		margin-top: 13px;
 		margin-bottom: 4px;
+		@include respond-to(568) {
+			margin-top: 40px; 
+		}
 
 		.filters-row{
-			// padding: 40px 0 12px; //jan.27
 			padding: 22px 0 12px;
 		}
 	}
@@ -62,6 +87,10 @@
 }
 
 .filters-row{
+	@include clearfix;
+	@include respond-to(1400) {
+		margin-left: -1%; 
+	}
 	.de-select{
 		&:last-child{
 			margin-right: 0;
@@ -125,7 +154,10 @@
 			@extend %before;
 			@extend %ham;
 			background: url("assets/img/bottom-shadow-small.png") no-repeat;
-			width: 974px;
+			-webkit-background-size: 100%; 
+			-o-background-size: 100%; 
+			background-size: 100%; 
+			width: 100%;
 			height: 13px;
 			position: absolute;
 			bottom: 0px;
@@ -136,7 +168,7 @@
 
 .cars-brands-block{
 	position: relative;
-	width: 1266px;
+	max-width: 1266px;
 	margin: auto;
 	padding-bottom: 60px;
 	text-align: center;
@@ -146,7 +178,10 @@
 		@extend %ham;
 		position: absolute;
 		background: url(assets/img/bottom-shadow.png) no-repeat;
-		width: 1266px;
+		-webkit-background-size: 100%; 
+		-o-background-size: 100%; 
+		background-size: 100%; 
+		width: 100%;
 		height: 13px;
 		bottom: -13px;
 	}
@@ -155,15 +190,15 @@
 .home-slider{
 	margin: auto;
 	margin-bottom: 90px;
-	height: 646px;
-	overflow:hidden ;
+	//height: 646px;
+	//overflow:hidden ;
 
 }
 
 .sh-item{
 	position: relative;
-	height: 646px !important;
-	width: 1350px !important;
+	//height: 646px !important;
+	//width: 1350px !important;
 	overflow:hidden ;
 	.tag{
 		position: absolute;
@@ -639,6 +674,11 @@
 				}
 			}
 		}
+	}
+}
+.help-block{
+	@include respond-to(760){
+		display: none;
 	}
 }
 

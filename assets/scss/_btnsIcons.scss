@@ -41,14 +41,17 @@
 	font-size: 16px;
 	@include border-radius(2px);
 	&:hover{
-		// @include opacity(.8);//jan.27
 		background: darken($red_color, 5%);
 	}
 
 	&.btn-big{
+		width: 100%;
 		padding: 17px 95px;
 		font-size: 22px;
 		@include text-shadow(0 1px 1px rgba(0,0,0,.1));
+		@include respond-to(1024){
+			padding: 10px; 
+		}
 	}
 }
 

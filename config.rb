@@ -9,6 +9,9 @@ images_dir = "assets/img"
 javascripts_dir = "assets/js"
 fonts_dir = "assets/fonts"
 
+# sourcemap enable
+sourcemap = true
+
 output_style = :compressed
 environment = :development
 

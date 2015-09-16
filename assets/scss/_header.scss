@@ -3,6 +3,9 @@
 	padding: 10px 25px 12px;
 	position: relative;
 	height: 62px;
+	@include respond-to(1024){
+		display: none;
+	}
 
 	.top-head-menu{
 		float: left;
@@ -82,17 +85,55 @@
 		}
 	}
 
+	.mainnav-hamb {
+		position: absolute;
+		display: none;
+		width: 30px;
+		height: 30px;
+		background: transparent; 
+		border: none;
+		padding: 0;
+		top: 13px;  
+		right: 13px;
+		z-index: 11;
+		@include respond-to(1024) {
+			display: block;
+		}
+		span {
+			position: relative;
+			display: block;
+			height: 2px;
+			background: #FFF;
+			margin-bottom: 8px;  
+			@include transition(all $time);
+		}
+		&.is-open {
+			span:first-child {
+				@include transform(rotate(45deg));
+				top: 10px;
+			}
+			span:nth-child(2) {
+				@include opacity(0);
+			}
+			span:last-child {
+				top: -10px;
+				@include transform(rotate(-45deg));
+			}
+		}
 
+	}
 	.mainnav{
-		display: inline-block;
-		vertical-align: middle;
-		margin-left: 128px;
+		float: right;
+		padding-right: 25px;
 		li{
 			display: inline-block;
 			vertical-align: middle;
 			margin-right: 45px;
 			&:last-child{
 				margin-right: 0;
+			}
+			@include respond-to(1280) {
+				margin-right: 20px; 
 			}
 
 			&.active-item{
@@ -125,14 +166,37 @@
 				margin: 0px 22px;
 				position: relative;
 				display: block;
-				color: #ffffff;
+				color: #fff;
 				@include transition(all $time);
 				border-bottom: 1px solid transparent;
 				&:hover{
-					border-color: #ffffff;
+					border-color: #fff;
 				}
 
 				
+			}
+		}
+		@include respond-to(1024){
+			position: fixed;
+			top: 0;
+			right: 0;
+			width: 250px;
+			height: 100vh;
+			padding: 58px 20px 20px;  
+			background-color: $basefont_color;
+			background: url(assets/img/bg-pattern.png) repeat;
+			@include transform(translateX(100%));
+			@include transition(transform .2s);
+			z-index: 10;
+			&.is-open {
+				@include transform(translateX(0));
+			}
+			li{
+				display: block;
+				margin: 0 0 20px 0;
+				a{
+					margin: 0; 
+				}
 			}
 		}
 	}
@@ -148,21 +212,45 @@
 
 }
 
-
+.mainheader-bottom-wrap {
+	min-height: 57px;
+	@include respond-to(900){
+		min-height: 0;
+	}
+}
+.mainheader-bottom.is-fixed {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	@include respond-to(900){
+		position: relative;
+		top: auto;
+		left: auto;
+		transform: translateX(0);
+	}
+}
 .mainheader-bottom{
+	max-width: 1400px;
+	margin: 0 auto; 
 	background: #f2f2f2;
 	padding-right: 25px;
 	@include box-sizing(border-box);
 	z-index: 9999;
 	border-bottom: 1px solid rgba(178, 178, 178, 0.4);
+	@include clearfix;
 
-
-
+	@include respond-to(1024){
+		padding-right: 13px;
+	}
 	.head-offers{
 		width: 405px;
 		margin-right: 15px;
 		display: inline-block;
 		vertical-align: middle;
+		@include respond-to(1280){
+			display: none;
+		}
 
 		.offers-icon{
 			width: 56px;
@@ -217,6 +305,14 @@
 	.bothead-nav{
 		display: inline-block;
 		vertical-align: middle;
+		@include respond-to(1280){
+			float: left;
+			padding-top: 10px; 
+			padding-left: 25px; 
+		}
+		@include respond-to(900){
+			display: none; 
+		}
 		li{
 			display: inline-block;
 			vertical-align: middle;
@@ -251,6 +347,12 @@
 						border-color: transparent;
 					}
 				}
+			}
+		}
+		@include respond-to(1024){
+			padding-left: 13px; 
+			li {
+				padding: 10px 13px; 
 			}
 		}
 	}
