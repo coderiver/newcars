@@ -190,20 +190,23 @@
 .home-slider{
 	margin: auto;
 	margin-bottom: 90px;
-	//height: 646px;
-	//overflow:hidden ;
-
+	@include respond-to(600){
+		margin-bottom: 60px; 
+	}
 }
 
 .sh-item{
 	position: relative;
-	//height: 646px !important;
-	//width: 1350px !important;
 	overflow:hidden ;
 	.tag{
 		position: absolute;
 		top: 18px;
 		left: 16px;
+		margin-left: 0; 
+		@include respond-to(600){
+			top: 10px;
+			left: 10px;
+		}
 	}
 }
 

@@ -931,17 +931,26 @@ a {
 	@extend %table;
 	text-align: center;
 	margin-left: -17px; 
+	@include respond-to(600){
+		margin-left: 0; 
+	}
 	.cb-item{
 		display: inline-block;
 		vertical-align: top;
 		margin-left: 17px;
 		margin-bottom: 30px;
 		@include transition(all $time);
+		@include respond-to(600){
+			margin-left: 0; 
+			width: 50%;
+			padding: 1%; 
+			text-align: center;
+		}
 		&>a{
 			@include opacity(.5);
 			display: block;
 		}
-
+	
 		.cb-img {
 			width:            160px;
 			height:           120px;
@@ -955,6 +964,10 @@ a {
 			img {
 				position: absolute;
 				@extend %cam;
+			}
+			@include respond-to(600){
+				margin: 0 auto 10px; 
+				max-width: 100%;
 			}
 		}
 
@@ -1123,17 +1136,28 @@ a {
 		left: 50px;
 		right: 50px;
 	}
+	@include respond-to(600){
+		left: 0;
+		right: 0;
+	}
 
 	.leftpart{
 		float: left;
 		font-size: 25px;
 		color: #ffffff;
 		padding: 15px 0px 10px;
+		@include respond-to(760){
+			float: none;
+			padding: 0; 
+			text-align: center;
+		}
 	}
 	.rightpart{
 		float: right;
 		text-align: right;
-
+		@include respond-to(760){
+			display: none;
+		}
 		.old-price-red{
 			display: inline-block;
 			vertical-align: middle;
@@ -1278,6 +1302,12 @@ a {
 		.hidden {
 			display: none;
 		}
+		@include respond-to(800){
+			width: 100%; 
+		}
+		@include respond-to(480){
+			padding-right: 0; 
+		}
 	}
 
 	.open_full_form{
@@ -1291,6 +1321,11 @@ a {
 		.btn-red{
 			padding: 18px 55px;
 			font-size: 22px;
+			@include respond-to(480){
+				padding: 18px;
+				width: 100%;
+				text-align: center;  
+			}
 		}
 
 	}
@@ -1307,7 +1342,11 @@ a {
 		text-align: right;
 		font-size: 12px;
 		text-transform: uppercase;
-
+		@include respond-to(480){
+			width: 100%;
+			padding-bottom: 10px;
+			text-align: center; 
+		}
 	}
 	@include respond-to(1400) {
 		.de-select-filter {
@@ -1323,6 +1362,9 @@ a {
 			float: none;
 			display: inline-block;
 		}
+		@include respond-to(480){
+			width: 100%;
+		}
 		&.small{
 			width: 24%;
 		}
@@ -1332,14 +1374,26 @@ a {
 			dt{
 				min-width: 250px;
 			}
+			@include respond-to(1400){
+				width: 72%;
+				min-width: 1px;
+			}
+			@include respond-to(480){
+				width: 100%;
+			}
 		}
 	}
 	.simp-input{
 		width: 73%;
 		&.small{
-
 			width: 46%;
 			margin-right: 2%;
+			@include respond-to(480){
+				width: 74%; 
+			}
+		}
+		@include respond-to(480){
+			width: 100%; 
 		}
 	}
 	.checkbox-wrap{
