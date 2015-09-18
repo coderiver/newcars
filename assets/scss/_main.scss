@@ -213,10 +213,24 @@
 
 .modelrow-head{
 	margin-bottom: 30px;
+	@include respond-to(568){
+		@include clearfix;
+	}
+	@include respond-to(360){
+		text-align: center;
+	}
 	img{
 		display: inline-block;
 		vertical-align: middle;
 		margin-right: 16px;
+		@include respond-to(568){
+			float: left;
+			margin-bottom: 20px;
+		}
+		@include respond-to(360){
+			float: none;
+			margin-left: 0; 
+		}
 	}
 	h3{
 		margin-bottom: 0;
@@ -224,6 +238,13 @@
 		display: inline-block;
 		vertical-align: middle;
 		margin-right: 30px;
+		@include respond-to(568){
+			overflow: hidden; 
+			margin-bottom: 10px;
+		}
+		@include respond-to(360){
+			margin-right: 0; 
+		}
 	}
 	span{
 		display: inline-block;

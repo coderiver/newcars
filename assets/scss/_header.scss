@@ -107,6 +107,7 @@
 			@include transition(all $time);
 		}
 		&.is-open {
+			position: fixed;
 			span:first-child {
 				@include transform(rotate(45deg));
 				top: 10px;
@@ -348,6 +349,7 @@
 		}
 		@include respond-to(1280){
 			float: left;
+			margin-top: 0; 
 			padding-top: 10px; 
 			padding-left: 25px; 
 		}

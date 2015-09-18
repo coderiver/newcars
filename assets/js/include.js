@@ -1341,11 +1341,8 @@ $(window).on('load', function(){
 
 	        var top = ($(window).scrollTop() - $( ".sidebar_hcSticky" ).offset().top) + 82;
 
-	        if ($(window).width()) {
 
-	        };
-
-	        if(topS < 83 ) {
+	        if(topS < 83 &&  $(window).width() > 900) {
 	        	//moment of stoping sticky scrolling
 	            if(bottom < tot) {
 	                $( ".sidebar_hcSticky .widget.sticky-banner" ).css({

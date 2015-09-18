@@ -1,13 +1,17 @@
 .sidebar{
 	width: 22%;
 	float: left;
-
 	.side-banner {
 		img {
 			width: 100%;
 		}
 	}
-
+	@include respond-to(900){
+		width: 100%; 
+		.side-banner {
+			display: none; 
+		}
+	}
 }
 .widget{
 	margin-bottom: 25px;
@@ -38,8 +42,10 @@
 	background: #fbfbfb;
 	border: 1px solid #f0f0f0;
 	border-top: none;
+	@include respond-to(600){
+		
+	}
 }
-
 .top-sellers,
 .read-also{
 	.top-seller-item,
@@ -50,6 +56,7 @@
 		}
 		a{
 			display: block;
+			@include clearfix;
 			&:hover{
 				.img-cont{
 					border-color: $red_color;
@@ -61,8 +68,7 @@
 
 		}
 		.img-cont{
-			display: inline-block;
-			vertical-align: middle;
+			float: left;
 			@include transition(border $time);
 			width: 73px;
 			height: 57px;
@@ -76,8 +82,7 @@
 			}
 		}
 		.tsi-name{
-			display: inline-block;
-			vertical-align: middle;
+			overflow: hidden;
 			color: #212121;
 			font-size: 14px;
 			width: 165px;
