@@ -222,7 +222,7 @@
 	position: fixed;
 	top: 0;
 	left: 50%;
-	transform: translateX(-50%);
+	@include transform(translateX(-50%));
 	@include respond-to(900){
 		position: relative;
 		top: auto;
@@ -230,7 +230,8 @@
 		transform: translateX(0);
 	}
 }
-.mainheader-bottom{
+.mainheader-bottom{	
+	position: relative;
 	max-width: 1400px;
 	margin: 0 auto; 
 	background: #f2f2f2;
@@ -241,13 +242,12 @@
 	@include clearfix;
 
 	@include respond-to(1024){
-		padding-right: 13px;
+		padding: 0 13px;
 	}
 	.head-offers{
 		width: 405px;
 		margin-right: 15px;
-		display: inline-block;
-		vertical-align: middle;
+		float: left;
 		@include respond-to(1280){
 			display: none;
 		}
@@ -303,16 +303,8 @@
 
 
 	.bothead-nav{
-		display: inline-block;
-		vertical-align: middle;
-		@include respond-to(1280){
-			float: left;
-			padding-top: 10px; 
-			padding-left: 25px; 
-		}
-		@include respond-to(900){
-			display: none; 
-		}
+		float: left;
+		margin-top: 9px;
 		li{
 			display: inline-block;
 			vertical-align: middle;
@@ -349,10 +341,32 @@
 				}
 			}
 		}
+		@include respond-to(1280){
+			float: left;
+			padding-top: 10px; 
+			padding-left: 25px; 
+		}
 		@include respond-to(1024){
 			padding-left: 13px; 
 			li {
 				padding: 10px 13px; 
+			}
+		}
+		@include respond-to(900){
+			display: none;
+			position: absolute;
+			top: 50px;
+			left: 0;
+			right: 0;
+			padding-bottom: 15px;
+			padding-right: 10px; 
+			background: #f2f2f2; 
+			box-shadow: 0px 10px 10px -5px #A09E9E;
+		}
+		@include respond-to(600){
+			li {
+				display: block;
+				text-align: center; 
 			}
 		}
 	}

@@ -9,9 +9,9 @@
 			&:last-child{
 				text-align: right;
 				@include respond-to(800){
-					text-align: left;
+					text-align: right;
 				}
-				@include respond-to(800){
+				@include respond-to(480){
 					text-align: center;
 				}
 			}
@@ -33,10 +33,16 @@
 		@include respond-to(800){
 			width: 50%;
 			margin-bottom: 20px;
+			&:nth-child(2n){
+				text-align: right;
+			}
 		}
 		@include respond-to(480){
 			width: 100%;
 			text-align: center;
+			&:nth-child(2n){
+				text-align: center;
+			}
 		}
 		h3{
 			font-size: 14px;
@@ -138,8 +144,8 @@
 .socials-list{
 	width: 195px;
 	@extend %table;
-	@include respond-to(480){
-		margin: 0 auto; 
+	@include respond-to(800){
+		display: inline-block; 
 	}
 	.soc-item{
 		display: inline-block;

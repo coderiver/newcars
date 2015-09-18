@@ -287,9 +287,6 @@ jQuery(document).ready(function ($) {
 						insurance = '<p class="range-insurance">Страховка<span></span></p>',//for advanced search page
 						credit = '<p class="range-credit">Кредит<span></span></p>';//for advanced search page
 
-					console.log(ftrigger.html());
-					console.log(strigger.html());
-
 					ftrigger.append(sdl);
 					strigger.append(sdr);
 					if($(this).parents('.money').length){
@@ -362,12 +359,13 @@ jQuery(document).ready(function ($) {
 
 					}
 					
-					// sdl.html( "От " + ui.values[ 0 ]);
-					// sdr.html( "До " + ui.values[ 1 ]);
+
 					sdl.html( "От " + finRes);
 					sdr.html( "До " + finRes2);
+					$('.range-slider-min').html( "От " + finRes);
+					$('.range-slider-max').html( "До " + finRes2);
+
 					rfrom.val(ui.values[ 0 ]);//for advanced search page
-					// rto.val(finRes2);//for advanced search page
 					rto.val(ui.values[ 1 ]);//for advanced search page
 
 					if($('.money-total-price').length && $('.range-to').length){
@@ -381,13 +379,11 @@ jQuery(document).ready(function ($) {
 
 
 
-			// var sdl = $('#sdl-left'),
-			// 	sdr = $('#sdl-right'),
 			var sdl = $('.sdl-left'),
 				sdr = $('.sdl-right'),
 				lval = rfrom.val(),
 				rval = rto.val();
-			// var str = $( ".sl-range" ).slider( "values", 0 ),
+
 			var str = rslide.slider( "values", 0 ),
 				arf = str.toString(),
 				arr = arf.split( /(?=(?:...)*$)/ ),
@@ -399,9 +395,13 @@ jQuery(document).ready(function ($) {
 				newStr2 = arr2.toString(),
 				finRes2 = newStr2.replace(/,/g , " ");
 
+			$('.range-slider-min').html( "От " + finRes);
+			$('.range-slider-max').html( "До " + finRes2);
+
 			if(!$('.big-slider-range').parents('.money').length){
 				$(sdl).html( "От " + finRes);
 				$(sdr).html( "До " + finRes2);
+
 			}
 			else{
 				sdl.html("От " + finRes);
@@ -589,6 +589,11 @@ jQuery(document).ready(function ($) {
 		else {
 			$('body,html').animate({ scrollTop: destination }, 400);
 		}
+
+		// hide navigation on mobile view
+		$('.js-borthead-btn').removeClass('is-open');
+		$('.bothead-nav').slideUp(200);
+
 	});
 
 
@@ -1327,12 +1332,19 @@ $(window).on('load', function(){
 	if($('.sidebar>.widget.sticky-banner').length){
 		var wLength = $('.sidebar>.widget.sticky-banner').length;
 		$( ".sidebar>.widget.sticky-banner").eq(wLength-1).wrapAll( "<div class='sidebar_hcSticky' />");
-		$(window).on('scroll',function(){
+		$(window).on('scroll resize',function(){
 			var topS    = $( ".sidebar_hcSticky" ).offset().top - $(window).scrollTop();
 	        var bottom = $( ".mainfooter" ).offset().top - 120;
+	        var width = $('.sidebar').outerWidth();
 	        var tot = $(window).scrollTop() + $( ".sidebar_hcSticky .widget.sticky-banner" ).height() + 200;
 	        var fin  = bottom - $( ".sidebar_hcSticky .widget.sticky-banner" ).height() - $( ".sidebar_hcSticky" ).offset().top - 113;//81
-	        console.log(bottom, tot);
+
+	        var top = ($(window).scrollTop() - $( ".sidebar_hcSticky" ).offset().top) + 82;
+
+	        if ($(window).width()) {
+
+	        };
+
 	        if(topS < 83 ) {
 	        	//moment of stoping sticky scrolling
 	            if(bottom < tot) {
@@ -1340,15 +1352,15 @@ $(window).on('load', function(){
 	                    "position"  : "absolute",
 	                    "top"       : fin + "px",
 	                    "left"      : "0px",
-	                    "width"     : "300px"
+	                    "width"     : width + "px"
 	                });
 	            } else {
 	            	//moment of stick
 	                $( ".sidebar_hcSticky .widget.sticky-banner" ).css({
 	                    "position"  : "absolute",
-	                    "top"       : ($(window).scrollTop() - $( ".sidebar_hcSticky" ).offset().top) + 82,//114
+	                    "top"       : top,//114
 	                    "left"      : "0px",
-	                    "width"     : "300px"
+	                    "width"     : width + "px"
 	                });
 	            }
 	        } else {
@@ -1503,7 +1515,20 @@ $(window).on('load', function(){
 		
 	});
 
+	//	===============================================================================================
+	//	mobile unchor navigation toggle
+	//	===============================================================================================
 
+	$('.js-borthead-btn').on('click', function() {
+		if ($(this).hasClass('is-open')) {
+			$(this).removeClass('is-open');
+			$('.bothead-nav').slideUp(200);
+		}
+		else {
+			$(this).addClass('is-open');
+			$('.bothead-nav').slideDown(200);
+		}
+	});
 
 
 

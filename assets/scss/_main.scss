@@ -679,9 +679,51 @@
 		}
 	}
 }
-.help-block{
-	@include respond-to(760){
-		display: none;
+
+.bothead-nav-btn{
+	display: none;
+	position: relative;
+	float: left;
+	margin-top: 8px; 
+	width: 40px;
+	height: 40px; 
+	background: transparent;
+	border: 0; 
+	&:before {
+		content: "";
+		position: absolute;
+		top: 20px;
+		left: 4px;
+		@include transform(rotate(48deg));
+		width: 20px;
+		height: 2px;
+		background: #000; 
+		@include transition(all 200ms);
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		top: 20px;
+		left: 16px;
+		@include transform(rotate(-48deg));
+		width: 20px;
+		height: 2px;
+		background: #000; 
+		@include transition(all 200ms);
+	}
+	&.is-open {
+		&:before {
+			width: 30px;
+			top: 25px;
+		}
+		&:after {
+			width: 30px;
+			top: 25px;
+			left: 4px;
+		}
+	}
+	@include respond-to(900){
+		display: block;
 	}
 }
 
