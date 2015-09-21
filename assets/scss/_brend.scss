@@ -20,10 +20,14 @@
 .brend-part{
 	position: relative;
 	height: 100px;
-	width: 1400px;
+	width: 100%;
+	max-width: 1400px;
 	margin: auto;
 	a{
 		@extend %fullsize;
+	}
+	@include respond-to(960){
+		display: none;
 	}
 }
 .mainheader-bottom, .head-search-form{

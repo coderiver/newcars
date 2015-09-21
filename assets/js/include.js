@@ -479,10 +479,6 @@ jQuery(document).ready(function ($) {
 
 //	------------------------------------------
 
-	//if ($('.mainheader-bottom').length) {
-	//	$('.mainheader-bottom').hcSticky();
-	//}
-
 	function stickyHeader() {
 		
 		var scroll = $(window).scrollTop(),
@@ -590,9 +586,12 @@ jQuery(document).ready(function ($) {
 			$('body,html').animate({ scrollTop: destination }, 400);
 		}
 
-		// hide navigation on mobile view
-		$('.js-borthead-btn').removeClass('is-open');
-		$('.bothead-nav').slideUp(200);
+		if ($(window).width() <= 900) {
+			//hide navigation on mobile view
+			$('.js-borthead-btn').removeClass('is-open');
+			$('.bothead-nav').slideUp(200);
+		};
+		
 
 	});
 
@@ -873,251 +872,278 @@ $(window).on('load', function(){
 	//-------------- Випадання груп з характеристиками -----------------
 	$(function() {
 		if($('.trigger_link').length){
-			$('.trigger_link').each(function(){
-				$(this).click(function(){
-					var rowClass = $(this).attr('name');
-					if($(this).hasClass('close_row')){
-						$(this).removeClass('close_row');
-						$('.compare_page').find('.'+rowClass).slideDown();
-						return false
-					} else {
-						$(this).addClass('close_row');
-						$('.compare_page').find('.'+rowClass).slideUp();
-						return false
-					}
-				});
+			$('.trigger_link').click(function(){
+				var rowClass = $(this).attr('name');
+				if($(this).hasClass('close_row')){
+					$(this).removeClass('close_row');
+					$(this).closest('.grid_stabil').find('.'+rowClass).slideDown();
+					return false;
+				} else {
+					$(this).addClass('close_row');
+					$(this).closest('.grid_stabil').find('.'+rowClass).slideUp();
+					return false;
+				}
 			});
 		}
 	});
 
 	$(function(){
 		if($('.trigger_link_a').length){
-			// $('.trigger_link_a').each(function(){
-				$('.trigger_link_a').click(function(e){
-					e.preventDefault();
-					var tbody = $(this).parents('.red-tbl').find('tbody');
-					if(tbody.hasClass('nono')){
-						tbody.removeClass('nono');
-						tbody.slideDown();
-						return false;
-					} else {
-						tbody.addClass('nono');
-						tbody.slideUp();
-						return false;
-					}
-				});
-			// });
+			$('.trigger_link_a').click(function(e){
+				e.preventDefault();
+				var tbody = $(this).parents('.red-tbl').find('tbody');
+				if(tbody.hasClass('nono')){
+					tbody.removeClass('nono');
+					tbody.slideDown();
+					return false;
+				} else {
+					tbody.addClass('nono');
+					tbody.slideUp();
+					return false;
+				}
+			});
 		}
 	});
 
 
 	//-------------- Функція закриття та скролу за допомогою стрілок ліво/право -----------------
 
-	if ($('.compare-container').length) {
+		function compare(width) {
 
-		var main = $('.compare-container'),
-			prev = main.find('.line_scroll_prev'),
-			next = main.find('.line_scroll_next'),
-			slider = main.find('.compare_line'),
-			slide = slider.find('.grid_stabil'),
-			minSlides = 4,
-			slideWidth = 270,
-			visibleWidth = slideWidth*minSlides,
-			slidesNumber = slide.length,
-			sliderWidth = slideWidth*slidesNumber,
-			sliderPosition = slider.position().left,//позиція слайдера зліва;
-			newSliderPosition;
-
-		slider.width(slideWidth*slidesNumber);
-
-		function manageArrow(){
-			var left = visibleWidth - slider.width();
-			var slidesNumber = slider.find('.grid_stabil').length;
-
-			if(slider.position().left === left || slider.position().left < left){
-				next.addClass('disabled');
-			} else if(slider.find('.grid_stabil').length < 5) {
-				next.addClass('disabled');
-			} else {
-				next.removeClass('disabled');
-			}
-			if(slider.position().left === 0){
-				prev.addClass('disabled');
-			} else {
-				prev.removeClass('disabled');
-			}
-			if(slide.length < 5){
-				prev.addClass('disabled');
-				next.addClass('disabled');
-			}
-
-			if(slidesNumber <= minSlides){
-				slider.
-					animate({left:0}, 500, function(){
-						// manageArrow();
-					});
-					prev.addClass('disabled');
-			}
-		}
-		manageArrow();
-
-		//Роздаємо дата-атрибути колонкам
-		for(var i=0; i < slidesNumber; i++){
-			slider.find('.grid_stabil').eq(i).attr('data-nums',i);
-		}
-
-		//Клік по стрілці вперед
-		$(document).on('click', '.line_scroll_next', function(){
-
-			newSliderPosition = slider.position().left-slideWidth;
-
-			if(!slider.is(':animated') && !next.hasClass('disabled')){
-				slider.
-					animate({left:newSliderPosition}, 500, function(){
-						manageArrow();
-					});
-			}
-
-			return false;
-
-		});
-
-		//Клік по стрілці назад
-		$(document).on('click', '.line_scroll_prev', function(){
-
-			newSliderPosition = slideWidth + slider.position().left;
-
-			if(!slider.is(':animated') && !prev.hasClass('disabled')){
-				slider.
-					animate({left:newSliderPosition}, 500, function(){
-						manageArrow();
-					});
-			}
-
-			return false;
-
-		});
-
-		//-------------- Закриття колонки з характеристиками -----------------
-
-		$(document).on('click', '.close-car-desc', function(){
-
-			var el = $(this),
-				closing = el.parents('.grid_stabil');
-
-			closing.remove();
-			
-			slider.width(slideWidth * slider.find('.grid_stabil').length);
-
-			
-			// var xx = slider.width() - slideWidth;
-
-			for(var i=0; i < slider.find('.grid_stabil').length; i++){
-				slider.find('.grid_stabil').eq(i).attr('data-nums',i);
-			}
-
-			if(slider.find('.grid_stabil').length == 0){
-				main.addClass('nothing-to-compare');
-			}
-
-			var b = (-1)*slider.position().left + visibleWidth;
-			if(slider.find('.grid_stabil').length > 4){
-				if(b > slider.width()){
-					var spl = slider.position().left;
-					slider.animate({left:spl+slideWidth},500);
-				}
-			}
-
-			manageArrow();
-
-			return false;
-		});
-
-		//----- sticky head -----
-		$(window).on('scroll',function(){
-			var main = $('.compare-container'),//
-				mainTop = main.offset().top,//
-				leftArrow = main.find('.line_scroll_prev'),//
-				rightArrow = main.find('.line_scroll_next'),//
-				empty = main.find('.compare_character .empty_box'),//
-				parNames = main.find('.compare_character .compare_table.line_1'),
-				parName = parNames.find('.car-dscrpt'),
+			var main = $('.compare-container'),
+				prev = main.find('.line_scroll_prev'),
+				next = main.find('.line_scroll_next'),
 				slider = main.find('.compare_line'),
 				slide = slider.find('.grid_stabil'),
-				carDescr = slide.find('.compare_table.line_1'),
-				carDescrHeight = carDescr.height(),
-				carName = carDescr.find('.car-dscrpt'),
-				carNameHeight = carName.height(),
-				head = slide.find('.car-desc-head'),
-				headHeight = head.height(),
-				top = slide.offset().top,//відстань машинки від верху доку
-				stickyHeader = main.parents('body').find('.mainheader-bottom.sticky').height(),
-				scrlTop = $(window).scrollTop(),
-				h = scrlTop+stickyHeader,//
-				headTop = h-top,//на скільки проскролили після прилипання
-				ht = headTop+headHeight;
-			// console.log(headTop);
-			if(top < h){
-				$('.compare-container').find('.line_1').find('.car-dscrpt').addClass('grey');
-				head.css({
-					'position':'absolute',
-					'width':'270px',
-					'z-index':'2',
-					'top':headTop
+				minSlides = 4,
+				slideWidth = 270,
+				visibleWidth = slideWidth*minSlides,
+				slidesNumber = slide.length,
+				sliderWidth = slideWidth*slidesNumber,
+				sliderPosition = slider.position().left,
+				newSliderPosition;
+			
+			if (width > 1400) {
+				slider.width(slideWidth*slidesNumber);
+				
+				function manageArrow(){
+					var left = visibleWidth - slider.width();
+					var slidesNumber = slider.find('.grid_stabil').length;
+
+					if(slider.position().left === left || slider.position().left < left){
+						next.addClass('disabled');
+					} else if(slider.find('.grid_stabil').length < 5) {
+						next.addClass('disabled');
+					} else {
+						next.removeClass('disabled');
+					}
+					if(slider.position().left === 0){
+						prev.addClass('disabled');
+					} else {
+						prev.removeClass('disabled');
+					}
+					if(slide.length < 5){
+						prev.addClass('disabled');
+						next.addClass('disabled');
+					}
+
+					if(slidesNumber <= minSlides){
+						slider.
+							animate({left:0}, 500, function(){
+								// manageArrow();
+							});
+							prev.addClass('disabled');
+					}
+				}
+				manageArrow();
+
+				//Роздаємо дата-атрибути колонкам
+				for(var i=0; i < slidesNumber; i++){
+					slider.find('.grid_stabil').eq(i).attr('data-nums',i);
+				}
+
+				//Клік по стрілці вперед
+				$(document).on('click', '.line_scroll_next', function(){
+
+					newSliderPosition = slider.position().left-slideWidth;
+
+					if(!slider.is(':animated') && !next.hasClass('disabled')){
+						slider.
+							animate({left:newSliderPosition}, 500, function(){
+								manageArrow();
+							});
+					}
+
+					return false;
+
 				});
-				empty.css({
-					'position':'absolute',
-					'width':'270px',
-					'z-index':'2',
-					'top':headTop
+
+				//Клік по стрілці назад
+				$(document).on('click', '.line_scroll_prev', function(){
+
+					newSliderPosition = slideWidth + slider.position().left;
+
+					if(!slider.is(':animated') && !prev.hasClass('disabled')){
+						slider.
+							animate({left:newSliderPosition}, 500, function(){
+								manageArrow();
+							});
+					}
+
+					return false;
+
 				});
-				parName.css({
-					'position':'absolute',
-					'width':'270px',
-					'height':carNameHeight,
-					'z-index':'2',
-					'top':ht
+
+				//-------------- Закриття колонки з характеристиками -----------------
+
+				$(document).on('click', '.close-car-desc', function(){
+
+					var el = $(this),
+						closing = el.parents('.grid_stabil');
+
+					closing.remove();
+					
+					slider.width(slideWidth * slider.find('.grid_stabil').length);
+
+					
+					// var xx = slider.width() - slideWidth;
+
+					for(var i=0; i < slider.find('.grid_stabil').length; i++){
+						slider.find('.grid_stabil').eq(i).attr('data-nums',i);
+					}
+
+					if(slider.find('.grid_stabil').length == 0){
+						main.addClass('nothing-to-compare');
+					}
+
+					var b = (-1)*slider.position().left + visibleWidth;
+					if(slider.find('.grid_stabil').length > 4){
+						if(b > slider.width()){
+							var spl = slider.position().left;
+							slider.animate({left:spl+slideWidth},500);
+						}
+					}
+
+					manageArrow();
+
+					return false;
 				});
-				carName.css({
-					'position':'absolute',
-					'width':'270px',
-					'height':carNameHeight,
-					'z-index':'2',
-					'top':ht
-				});
-				carName.find('td').css({
-					'width':'270px',
-					'height':carNameHeight
-				});
-				leftArrow.css({
-					'top':headTop+89
-				});
-				rightArrow.css({
-					'top':headTop+89
-				});
-				$('.compare_table.line_1').css({
-					'padding-top':'280px'
-				});
-			} else {
-				$('.compare-container').find('.line_1').find('.car-dscrpt').removeClass('grey');
-				head.removeAttr("style");
-				empty.removeAttr("style");
-				parName.css({
-					'position':'initial'
-				});
-				carName.css({
-					'position':'initial'
-				});
-				carName.find('td').removeAttr("style");
-				leftArrow.removeAttr("style");
-				rightArrow.removeAttr("style");
-				$('.compare_table.line_1').css({
-					'padding-top':'0px'
+
+				//----- sticky head -----
+				$(window).on('scroll',function(){
+					if ($(window).width() >1400) {
+						var main = $('.compare-container'),//
+							mainTop = main.offset().top,//
+							leftArrow = main.find('.line_scroll_prev'),//
+							rightArrow = main.find('.line_scroll_next'),//
+							empty = main.find('.compare_character .empty_box'),//
+							parNames = main.find('.compare_character .compare_table.line_1'),
+							parName = parNames.find('.car-dscrpt'),
+							slider = main.find('.compare_line'),
+							slide = slider.find('.grid_stabil'),
+							carDescr = slide.find('.compare_table.line_1'),
+							carDescrHeight = carDescr.height(),
+							carName = carDescr.find('.car-dscrpt'),
+							carNameHeight = carName.height(),
+							head = slide.find('.car-desc-head'),
+							headHeight = head.height(),
+							top = slide.offset().top,
+							stickyHeader = main.parents('body').find('.mainheader-bottom.sticky').height(),
+							scrlTop = $(window).scrollTop(),
+							h = scrlTop+stickyHeader,//
+							headTop = h-top,
+							ht = headTop+headHeight;
+						if(top < h){
+							$('.compare-container').find('.line_1').find('.car-dscrpt').addClass('grey');
+							head.css({
+								'position':'absolute',
+								'width':'270px',
+								'z-index':'2',
+								'top':headTop
+							});
+							empty.css({
+								'position':'absolute',
+								'width':'270px',
+								'z-index':'2',
+								'top':headTop
+							});
+							parName.css({
+								'position':'absolute',
+								'width':'270px',
+								'height':carNameHeight,
+								'z-index':'2',
+								'top':ht
+							});
+							carName.css({
+								'position':'absolute',
+								'width':'270px',
+								'height':carNameHeight,
+								'z-index':'2',
+								'top':ht
+							});
+							carName.find('td').css({
+								'width':'270px',
+								'height':carNameHeight
+							});
+							leftArrow.css({
+								'top':headTop+89
+							});
+							rightArrow.css({
+								'top':headTop+89
+							});
+							$('.compare_table.line_1').css({
+								'padding-top':'280px'
+							});
+						} else {
+							$('.compare-container').find('.line_1').find('.car-dscrpt').removeClass('grey');
+							head.removeAttr("style");
+							empty.removeAttr("style");
+							parName.css({
+								'position':'initial'
+							});
+							carName.css({
+								'position':'initial'
+							});
+							carName.find('td').removeAttr("style");
+							leftArrow.removeAttr("style");
+							rightArrow.removeAttr("style");
+							$('.compare_table.line_1').css({
+								'padding-top':'0px'
+							});
+						}
+					};
+					
+					
 				});
 			}
-		});
+			else {
+				slider.removeAttr("style");
 
-	}
+				$(document).on('click', '.close-car-desc', function(){
+
+					$(this).closest('.grid_stabil').remove();
+
+					return false;
+				});
+
+			}
+
+		}
+		var windowWidth = $('.page-container').width();
+		
+		if ($('.compare-container').length) {
+			compare(windowWidth);
+		};
+		
+		$(window).on('resize', function() {
+			windowWidth = $('.page-container').width();
+			
+			if ($('.compare-container').length) {
+				compare(windowWidth);
+			};
+		});
+		
+
 
 	//--------------- Go Up Arrow ---------------------
 		
