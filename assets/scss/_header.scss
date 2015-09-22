@@ -317,7 +317,6 @@
 			padding: 10px 25px;
 			@include border-radius(3px);
 			cursor: pointer;
-
 			&:last-child{
 				margin-right: 0;
 			}
@@ -325,8 +324,6 @@
 				font-size: 14px;
 				border-bottom: 1px solid transparent;
 				@include transition(border $time);
-
-
 			}
 			&:hover{
 				a{
@@ -348,13 +345,13 @@
 			}
 		}
 		@include respond-to(1280){
-			float: left;
-			margin-top: 0; 
-			padding-top: 10px; 
-			padding-left: 25px; 
+			padding-left: 20px;  
+			li {
+				padding: 10px 15px; 
+			}
 		}
 		@include respond-to(1024){
-			padding-left: 13px; 
+			padding-left: 10px; 
 			li {
 				padding: 10px 13px; 
 			}
@@ -362,7 +359,7 @@
 		@include respond-to(900){
 			display: none;
 			position: absolute;
-			top: 50px;
+			top: 100%;
 			left: 0;
 			right: 0;
 			padding-bottom: 15px;
@@ -381,9 +378,13 @@
 	.garage-item{
 		float: right;
 		padding: 20px 0;
+		margin-left: 20px;
 		@include transition(all $time);
 		@include opacity(0);
 		visibility: hidden;
+		@include respond-to(1400){
+			margin-left: 10px;
+		}
 	}
 	.btn-red{
 		float: right;
@@ -392,6 +393,13 @@
 		@include transition(opacity $time);
 		// @include opacity(0);
 		// visibility: hidden;
+		@include respond-to(1400){
+			margin-left: 10px;
+		}
+		@include respond-to(960){
+			padding: 12px 10px; 
+		}
+
 	}
 
 

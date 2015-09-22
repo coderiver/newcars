@@ -5,8 +5,13 @@
 	}
 
 	.show-total-amount {
-		// margin-right: 38px;
 		left: -230px;
+		@include respond-to(1400){
+			left: 0; 
+		}
+		@include respond-to(480){
+			clear: both;
+		}
 	}
 }
 
@@ -112,25 +117,34 @@
 	position: relative;
 	margin-bottom: 50px;
 	@extend %ib;
+	width: 100%; 
 
 	&:before {
 		@extend %before;
 		left: 0;
 		@extend %vam;
 		margin-top: -3px;
+		@include respond-to(760){
+			top: 0;
+			@include transform(translateY(0));
+		}
 	}
-
 	span {
 		font-size: 22px;
 		text-transform: uppercase;
 		float: left;
 		margin-right: 140px;
+		@include respond-to(760){
+			display: block;
+			margin-right: 0; 
+			float: none; 
+		}
 	}
 
 	.params-checkbox-row {
 		@extend %table;
 		width: 310px;
-
+		
 		.checkbox-wrap{
 			@extend %ib;
 			width: 50%;
@@ -157,15 +171,25 @@
 				}
 			}
 		}
+		@include respond-to(760){
+			margin-top: 10px; 
+		}
 
-		//
+		@include respond-to(480){
+			width: 100%; 
+			.checkbox-wrap {
+				width: 100%;
+				margin-bottom: 10px; 
+			}
+		}
 	}
 }
 
 .brands-list,
 .brands-countries {
+		font-size: 0;
 	.checkbox-wrap {
-		width: 200px;
+		width: 100%; 
 		display: inline-block;
 		vertical-align: top;
 		height: 27px;
@@ -186,9 +210,17 @@
 		}
 	}
 }
-
+.brands-list {
+	.checkbox-wrap {
+		width: 50%; 
+		@include respond-to(760){
+			width: 100%; 
+		}
+	}
+}
 .insurance-choise {
 	.checkbox-wrap {
+		margin-bottom: 10px;
 		&.checking {
 			&.active {
 				label {
@@ -207,18 +239,33 @@
 
 
 .brands-list {
-	width: 680px;
+	width: 67%;
 	padding: 0 40px;
 	margin-bottom: 20px;
 	float: left;
+	@include respond-to(760){
+		width: 50%;
+		padding: 0 20px; 
+	}
+	@include respond-to(480){
+		width: 50%;
+		padding: 0 10px 0 0; 
+	}
 }
 
 .brands-countries {
 	float: right;
+	width: 33%; 
 	border-left: solid 1px #d6d6d6;
 	padding-left: 88px;
 	padding-top: 5px;
-
+	@include respond-to(760){
+		width: 50%;
+		padding-left: 30px; 
+	}
+	@include respond-to(480){
+		padding-left: 13px; 
+	}
 	span {
 		text-transform: uppercase;
 		font-size: 16px;
@@ -266,19 +313,23 @@
 
 	ul{
 		text-align: center;
+		font-size: 0;
+		margin-left: -7.3%;
+		@include respond-to(760){
+			margin-left: -5%; 
+		} 
 	}
 
 	.kc-item {
-		width: 285px !important;
+		width: 26% !important;
 		height: 124px;
 		text-align: center;
-		margin-right: 75px!important;
+		margin-left: 7.3%!important;
 		margin-bottom: 10px;
-
-		&:nth-of-type(3n) {
-			margin-right: 0!important;
+		@include respond-to(760){
+			width: 45%!important;  
+			margin-left: 5% !important;
 		}
-
 		a{
 			@include filter(grayscale(100%));
 			display: block;
@@ -327,6 +378,18 @@
 			width: 34px;
 			height: 25px;
 		}
+		span {
+			@include respond-to(760){
+				display: block;
+				margin-right: 0; 
+				float: none; 
+			}
+		}
+		.params-checkbox-row {
+			@include respond-to(760){
+				margin-top: 10px; 
+			}
+		}
 	}
 }
 
@@ -362,9 +425,19 @@
 	}
 	.params-checkbox-row {
 		height: auto;
-		margin-bottom: 40px;
-
+		margin-bottom: 20px;
+		@include clearfix;
+		span {
+			@include respond-to(1400){
+				display: block;
+				text-align: left;
+				margin-bottom: 20px;
+			}
+		}
 		dl {
+			@include respond-to(1400){
+				margin-left: 0; 
+			}
 			dd {
 				span {
 					display: inline-block;
@@ -377,7 +450,7 @@
 		.checkbox-wrap {
 			@extend %ib;
 			width: 122px;
-
+			margin-bottom: 10px;
 			input:checked+label {
 				color: #477fb3;
 			}
@@ -388,18 +461,23 @@
 		}
 	}
 }
-
 .money {
 	margin-bottom: 22px;
 
 	.big-slider-range {
 		margin: 0 0 100px;
+		padding: 0; 
+		overflow: hidden;
+		padding: 0 5px;
+		@include respond-to(640){
+			margin: 0 0 30px; 
+		}
 		.range-insurance, .range-credit{
 			display: block;
 		}
 
 		.range-slider-border{
-			width: 640px;
+			width: 100%;
 			margin-left: 0;
 		}
 
@@ -410,75 +488,79 @@
 
 		.form-row {
 			margin-bottom: 75px;
-
+			@include respond-to(640){
+				margin-bottom: 40px;
+			}
 			label{
 				width: auto;
 				margin-right: 10px;
+				@include respond-to(640){
+					width: 100%;
+					margin-bottom: 10px;
+					text-align: left; 
+				}
 			}
 			input {
 				font-size: 25px;
+				width: 237px; 
+				@include respond-to(640){
+					margin-bottom: 10px;
+				}
 			}
 		}
 
 		.segment {
 			height: 78px;
+			top: auto;
+			bottom: 0;
 
 			&:nth-child(3){
-				// left: 163px;
-				left: 53px;
+				left: 8.2%;
 			}
 			&:nth-child(4){
-				// left: 246px;
-				left: 106px;
+				left: 16.4%;
 			}
 			&:nth-child(5){
-				// left: 329px;
-				left: 159px;
+				left: 24.6%;
 			}
 			&:nth-child(6){
-				// left: 412px;
-				left: 212px;
+				left: 32.8%;
 			}
 			&:nth-child(7){
-				// left: 495px;
-				left: 265px;
+				left: 41%;
 			}
 			&:nth-child(8){
-				// left: 578px;
-				left: 318px;
+				left: 49.2%;
 			}
 			&:nth-child(9){
-				// left: 661px;
-				left: 371px;
+				left: 57.4%;
 			}
 			&:nth-child(10){
-				// left: 746px;
-				left: 424px;
+				left: 65.6%;
 			}
 			&:nth-child(11){
-				// left: 831px;
-				left: 477px;
+				left: 73.8%;
 			}
 			&:nth-child(12){
-				// left: 914px;
-				left: 530px;
+				left: 82%;
 			}
 			&:nth-child(13){
-				// left: 997px;
-				left: 583px;
+				left: 90.2%;
 			}
 		}
 
 		.slider-desc-list {
 			bottom: 98px;
-			left: 490px;
+			top: auto;
+			left: 0;
 			li{
 				font-size: 12px;
 				left: 0;
-				width: 35px;
-				margin-right: 17px;
+				width: 8.3%;
+				overflow: hidden;
+				white-space: normal;
+				text-overflow: ellipsis;
 				position: relative;
-//
 			}
 		}
 
@@ -546,7 +628,6 @@
 			.range-credit {
 				// top: 12px;//jan29
 				right: -77px;
-
 				span {
 					background:url(assets/img/range-bg3.png) repeat;
 					position: absolute;
@@ -593,7 +674,6 @@
 
 	.form-row {
 		margin-bottom: 40px;
-
 		label {
 			font-size: 16px;
 			color: #212121;
@@ -601,6 +681,12 @@
 			text-align: right;
 			margin-right: 38px;
 			text-transform: none;
+			@include respond-to(1400){
+				display: block;
+				width: 100%;
+				margin-bottom: 20px;
+				text-align: left; 
+			}
 		}
 		.de-select-filter {
 			dt {
@@ -612,11 +698,20 @@
 
 	.params-checkbox-row {
 		margin-bottom: 40px;
-
+		@include clearfix;
 		&:nth-last-child(1){
 			margin-bottom: 0;
 		}
-
+		
+		span {
+			@include respond-to(1400){
+				display: block;
+				width: 100%; 
+				margin-right: 0; 
+				text-align: left;
+				margin-bottom: 20px;
+			}
+		}
 		.checkbox-wrap {
 			@extend %ib;
 			min-width: 122px;
@@ -632,7 +727,8 @@
 
 		.money-total-price,
 		.money-total-type {
-			width: auto;
+			display: inline-block!important;
+			width: auto!important;
 			font-size: 25px;
 			margin-right: 0;
 		}
@@ -661,6 +757,11 @@
 		vertical-align: middle;
 		margin-bottom: 0;
 		margin-left: 20px;
+		@include respond-to(568){
+			display: block;
+			margin-left: 0;
+			margin-top: 20px; 
+		}
 	}
 }
 .checkbox-row {

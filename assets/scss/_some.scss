@@ -708,10 +708,10 @@ a {
 	&.kc-search{
 		width: 100%;
 		text-align: left;
-		.kc-item{
-			margin-right: 40px !important;
-			text-align: center;
-		}
+		// .kc-item{
+		// 	margin-right: 40px !important;
+		// 	text-align: center;
+		// }
 	}
 
 }
@@ -1680,7 +1680,7 @@ a {
 		left: 0;
 	}
 	@include respond-to(640){
-		display: none;
+		display: none!important;
 	}
 }
 .sdl-right{
