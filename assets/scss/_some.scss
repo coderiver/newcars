@@ -2310,6 +2310,11 @@ a {
 	h3{
 		padding-left: 20px;
 	}
+	@include respond-to(1400){
+		h3 {
+			padding-left: 0; 
+		}
+	}
 }
 
 
@@ -2348,9 +2353,13 @@ a {
 		}
 	}
 }
-
+.complect-tbl-wrap {
+	width: 100%; 
+	overflow-x: auto;
+}
 .complect-tbl{
 	width: 100%;
+	min-width: 740px;
 	margin-bottom: 20px;
 	thead{
 		th{

@@ -1408,9 +1408,33 @@
 .video-block {
 	height: 713px;
 	background: url(assets/img/preloader.gif) center no-repeat;
+	@include respond-to(1024){
+		height: 533px;
+	}
+	@include respond-to(640){
+		height: 450px;
+	}
+	@include respond-to(480){
+		height: 330px;
+	}
+	@include respond-to(320){
+		height: 260px;
+	}
 	iframe {
 		width: 100%;
 		height: 713px;
+		@include respond-to(1024){
+			height: 533px;
+		}
+		@include respond-to(640){
+			height: 450px;
+		}
+		@include respond-to(480){
+			height: 330px;
+		}
+		@include respond-to(320){
+			height: 260px;
+		}
 	}
 	.video-start {
 		background-size: cover;
