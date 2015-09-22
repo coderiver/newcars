@@ -109,84 +109,87 @@
 </div>
 
 
-<div class="mainheader-bottom">
-	<div class="head-offers cf">
-		<span class="offers-icon">
-			<i class="icon-dbcar"></i>
-		</span>
-	</div>
+<div class="mainheader-bottom-wrap">
+	<div class="mainheader-bottom">
+		<div class="head-offers cf">
+			<span class="offers-icon">
+				<i class="icon-dbcar"></i>
+			</span>
+		</div>
+		<button type="button" class="bothead-nav-btn js-borthead-btn"></button>
+		<ul class="bothead-nav">
+			<li class="current"><a data-href="characteristics" href="">Технические характеристики</a></li>
+			<li><a data-href="engine" href="">Двигатель</a></li>
+			<li><a data-href="transmission" href="">Коробка</a></li>
+			<li><a data-href="picking" href="">Комплектации</a></li>
+		</ul>
 
-	<ul class="bothead-nav">
-		<li class="current"><a data-href="characteristics" href="">Технические характеристики</a></li>
-		<li><a data-href="engine" href="">Двигатель</a></li>
-		<li><a data-href="transmission" href="">Коробка</a></li>
-		<li><a data-href="picking" href="">Комплектации</a></li>
-	</ul>
+		<a class="btn-red" href="">Сравнить</a>
 
-	<a class="btn-red" href="">Сравнить</a>
+		<div class="garage-item garage-wrap">
+			<a class="garage-trigg" href="">8 в гараже</a>
 
-	<div class="garage-item garage-wrap">
-		<a class="garage-trigg" href="">8 в гараже</a>
-		<div class="garage-popup">
-			<ul class="gar-content">
-				<li>
-					<div class="gar-chekbox-wrap">
-						<input type="checkbox" id="p1"/>
-						<label for="p1">
-							<div class="car-img" href="">
-								<img src="assets/photo/cars/popup1.png" alt="" />
-							</div>
-							<div class="car-desc">
-								Subaru Forester  Impress
-								Mega 2.0D 4WD AT (163 лс)
-							</div>
+			<div class="garage-popup">
+				<ul class="gar-content">
+					<li>
+						<div class="gar-chekbox-wrap">
+							<input type="checkbox" id="p1" />
+							<label for="p1">
+								<div class="car-img" href="">
+									<img src="assets/photo/cars/popup1.png" alt="" />
+								</div>
+								<div class="car-desc">
+									Subaru Forester Impress
+									Mega 2.0D 4WD AT (163 лс)
+								</div>
 
-							<i class="icon-close remove_car"></i>
-						</label>
+								<i class="icon-close remove_car"></i>
+							</label>
 
 
-					</div>
-				</li>
-				<li>
-					<div class="gar-chekbox-wrap">
-						<input type="checkbox" id="p2"/>
-						<label for="p2">
-							<div class="car-img" href="">
-								<img src="assets/photo/cars/popup2.png" alt="" />
-							</div>
-							<div class="car-desc">
-								Subaru Forester  Impress
-								Mega 2.0D 4WD AT (163 лс)
-							</div>
+						</div>
+					</li>
+					<li>
+						<div class="gar-chekbox-wrap">
+							<input type="checkbox" id="p2" />
+							<label for="p2">
+								<div class="car-img" href="">
+									<img src="assets/photo/cars/popup2.png" alt="" />
+								</div>
+								<div class="car-desc">
+									Subaru Forester Impress
+									Mega 2.0D 4WD AT (163 лс)
+								</div>
 
-							<i class="icon-close remove_car"></i>
-						</label>
-					</div>
-				</li>
-				<li>
-					<div class="gar-chekbox-wrap">
-						<input type="checkbox" id="p3"/>
-						<label for="p3">
-							<div class="car-img" href="">
-								<img src="assets/photo/cars/popup3.png" alt="" />
-							</div>
-							<div class="car-desc">
-								Subaru Forester  Impress
-								Mega 2.0D 4WD AT (163 лс)
-							</div>
+								<i class="icon-close remove_car"></i>
+							</label>
+						</div>
+					</li>
+					<li>
+						<div class="gar-chekbox-wrap">
+							<input type="checkbox" id="p3" />
+							<label for="p3">
+								<div class="car-img" href="">
+									<img src="assets/photo/cars/popup3.png" alt="" />
+								</div>
+								<div class="car-desc">
+									Subaru Forester Impress
+									Mega 2.0D 4WD AT (163 лс)
+								</div>
 
-							<i class="icon-close remove_car"></i>
-						</label>
-					</div>
-				</li>
-			</ul>
-			<div class="garage-footer">
-				<a class="btn-red-transparent" href="">Сравнить выбранные</a>
-				<a class="btn-red" href="">Сравнить все</a>
+								<i class="icon-close remove_car"></i>
+							</label>
+						</div>
+					</li>
+				</ul>
+				<div class="garage-footer">
+					<a class="btn-red-transparent" href="">Сравнить выбранные</a>
+					<a class="btn-red" href="">Сравнить все</a>
+				</div>
 			</div>
 		</div>
-	</div>
 
+	</div>
 </div>
 
 
@@ -345,7 +348,6 @@
 	</span>
 	<span><a href="">Seat Leon</a></span>
 </div>
->
 
 
 <section class="section cf" >
@@ -685,6 +687,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_2" href="#">
+	<span>Технические характеристики</span>
+</a>
+
 <div class="compare_table line_2">
 	<table>
 		<tbody>
@@ -759,6 +765,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_3" href="#" data-id="engine">
+	<span>Двигатель</span>
+</a>
+
 <div class="compare_table line_3">
 	<table>
 		<tbody>
@@ -801,6 +811,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_4" href="#" data-id="transmission">
+	<span>Коробка</span>
+</a>
+
 <div class="compare_table line_4">
 	<table>
 		<tbody>
@@ -815,6 +829,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_5" href="#" data-id="picking" data-last="">
+	<span>Комплектации</span>
+</a>
+
 <div class="compare_table line_5">
 	<table>
 		<tbody>
@@ -880,7 +898,8 @@
 </div>
 
 </div>
-</div><!-- кінець першої колонки -->
+</div>
+<!-- кінець першої колонки -->
 
 <!-- Друга порвівняльна колонка -->
 <div class="grid_stabil">
@@ -895,7 +914,7 @@
 	<table>
 		<tbody>
 		<tr class="car-dscrpt" name="row_0">
-			<td>Subaru Forester  Impress Mega 2.0D 4WD AT (163 лс) Titanium</td>
+			<td>Subaru Forester Impress Mega 2.0D 4WD AT (163 лс) Titanium</td>
 		</tr>
 		<tr name="row_1">
 			<td>
@@ -954,6 +973,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_2" href="#">
+	<span>Технические характеристики</span>
+</a>
+
 <div class="compare_table line_2">
 	<table>
 		<tbody>
@@ -1028,6 +1051,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_3" href="#" data-id="engine">
+	<span>Двигатель</span>
+</a>
+
 <div class="compare_table line_3">
 	<table>
 		<tbody>
@@ -1070,6 +1097,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_4" href="#" data-id="transmission">
+	<span>Коробка</span>
+</a>
+
 <div class="compare_table line_4">
 	<table>
 		<tbody>
@@ -1084,6 +1115,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_5" href="#" data-id="picking" data-last="">
+	<span>Комплектации</span>
+</a>
+
 <div class="compare_table line_5">
 	<table>
 		<tbody>
@@ -1149,7 +1184,8 @@
 </div>
 
 </div>
-</div><!-- кінець другої колонки -->
+</div>
+<!-- кінець другої колонки -->
 
 <!-- Третя порвівняльна колонка -->
 <div class="grid_stabil">
@@ -1164,7 +1200,7 @@
 	<table>
 		<tbody>
 		<tr class="car-dscrpt" name="row_0">
-			<td>Ford Kuga 2.0D 4WD AT (163 лс) Titanium</td>
+			<td>Subaru Forester Impress Mega 2.0D 4WD AT (163 лс) Titanium</td>
 		</tr>
 		<tr name="row_1">
 			<td>
@@ -1201,7 +1237,7 @@
 						<li class=""></li>
 						<li class=""></li>
 					</ul>
-					<span>(212)</span>
+					<span>(334)</span>
 				</div>
 			</td>
 		</tr>
@@ -1223,6 +1259,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_2" href="#">
+	<span>Технические характеристики</span>
+</a>
+
 <div class="compare_table line_2">
 	<table>
 		<tbody>
@@ -1297,6 +1337,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_3" href="#" data-id="engine">
+	<span>Двигатель</span>
+</a>
+
 <div class="compare_table line_3">
 	<table>
 		<tbody>
@@ -1339,6 +1383,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_4" href="#" data-id="transmission">
+	<span>Коробка</span>
+</a>
+
 <div class="compare_table line_4">
 	<table>
 		<tbody>
@@ -1353,276 +1401,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
-<div class="compare_table line_5">
-	<table>
-		<tbody>
-		<tr class="even_tr" name="row_0">
-			<td>Touring</td>
-		</tr>
-		<tr name="row_1">
-			<td></td>
-		</tr>
-		<tr class="even_tr" name="row_2">
-			<td>ABS, EBA, Cruise control, EBD</td>
-		</tr>
-		<tr name="row_3">
-			<td>Омыватели высокого давления</td>
-		</tr>
-		<tr class="even_tr" name="row_4">
-			<td></td>
-		</tr>
-		<tr name="row_5">
-			<td>Самозатемняющееся салонное зеркало заднего вида, Подогрев, Электропривод</td>
-		</tr>
-		<tr name="row_6">
-			<td>Фронтальные, Боковые спереди, Надувные шторки</td>
-		</tr>
-		<tr name="row_7">
-			<td></td>
-		</tr>
-		<tr name="row_8">
-			<td></td>
-		</tr>
-		<tr name="row_9">
-			<td>CD, MP3</td>
-		</tr>
-		<tr name="row_10">
-			<td>По вылету</td>
-		</tr>
-		<tr name="row_11">
-			<td>Давления в шинах, Света, Дождя</td>
-		</tr>
-		<tr name="row_12">
-			<td>Ткань</td>
-		</tr>
-		<tr name="row_13">
-			<td>Противотуманные фары</td>
-		</tr>
-		<tr name="row_14">
-			<td>Климат контроль с разделенной регулировкой</td>
-		</tr>
-		<tr name="row_15">
-			<td></td>
-		</tr>
-		<tr name="row_16">
-			<td>С дистанционным управлением</td>
-		</tr>
-		<tr name="row_17">
-			<td>Есть</td>
-		</tr>
-		<tr name="row_18">
-			<td>Есть</td>
-		</tr>
-		</tbody>
-	</table>
-</div>
+<a class="trigger_link" name="line_5" href="#" data-id="picking" data-last="">
+	<span>Комплектации</span>
+</a>
 
-</div>
-</div><!-- кінець третьої колонки -->
-
-<!-- Четверта порвівняльна колонка -->
-<div class="grid_stabil">
-
-<div class="product_desc">
-
-<div class="car-desc-head">
-	<img src="assets/photo/grand-vitara.png" alt="">
-	<a href="#" class="close-car-desc"></a>
-</div>
-
-<div class="compare_table line_1">
-	<table>
-		<tbody>
-		<tr class="car-dscrpt" name="row_0">
-			<td>Grant Vitara 2.0D 4WD </td>
-		</tr>
-		<tr name="row_1">
-			<td>
-				<dl class="de-select de-select-filter">
-					<dt class="">2014-2014</dt>
-					<dd>
-						<a href="#">2013-2013</a>
-						<a href="#">2012-2012</a>
-					</dd>
-				</dl>
-			</td>
-		</tr>
-		<tr name="row_2">
-			<td>
-				<dl class="de-select de-select-filter">
-					<dt class="">Кроссовер</dt>
-					<dd>
-						<a href="#">Кроссовер</a>
-						<a href="#">Кроссовер</a>
-					</dd>
-				</dl>
-			</td>
-		</tr>
-		<tr name="row_3">
-			<td>125000 грн</td>
-		</tr>
-		<tr name="row_4">
-			<td>
-				<div class="rate-block">
-					<ul class="stars-list red">
-						<li class="active"></li>
-						<li class="active"></li>
-						<li class="active"></li>
-						<li class=""></li>
-						<li class=""></li>
-					</ul>
-					<span>(272)</span>
-				</div>
-			</td>
-		</tr>
-		<tr name="row_5">
-			<td>
-				<div class="rate-block">
-					<ul class="stars-list red">
-						<li class="active"></li>
-						<li class="active"></li>
-						<li class="active"></li>
-						<li class="active"></li>
-						<li class=""></li>
-					</ul>
-				</div>
-			</td>
-		</tr>
-		</tbody>
-	</table>
-</div>
-
-<a class="empty_compare_link"></a>
-<div class="compare_table line_2">
-	<table>
-		<tbody>
-		<tr name="row_0">
-			<td>Универсал</td>
-		</tr>
-		<tr name="row_1">
-			<td>5</td>
-		</tr>
-		<tr name="row_2">
-			<td>5</td>
-		</tr>
-		<tr name="row_3">
-			<td>(н/д) / 1695 / 1810</td>
-		</tr>
-		<tr name="row_4">
-			<td>2640</td>
-		</tr>
-		<tr name="row_5">
-			<td>1540</td>
-		</tr>
-		<tr name="row_6">
-			<td>1570</td>
-		</tr>
-		<tr name="row_7">
-			<td>Постоянный полный</td>
-		</tr>
-		<tr name="row_8">
-			<td>Дисковые</td>
-		</tr>
-		<tr name="row_9">
-			<td>Дисковые</td>
-		</tr>
-		<tr name="row_10">
-			<td>200</td>
-		</tr>
-		<tr name="row_11">
-			<td>1890</td>
-		</tr>
-		<tr name="row_12">
-			<td>1386</td>
-		</tr>
-		<tr name="row_13">
-			<td>1386</td>
-		</tr>
-		<tr name="row_14">
-			<td>McPherson</td>
-		</tr>
-		<tr name="row_15">
-			<td>Многорычажная подвеска; Стабилизатор поперечной устойчивости; Винтовые пружины</td>
-		</tr>
-		<tr name="row_16">
-			<td>12</td>
-		</tr>
-		<tr name="row_17">
-			<td>175</td>
-		</tr>
-		<tr name="row_18">
-			<td>Гидроусилитель</td>
-		</tr>
-		<tr name="row_19">
-			<td>многоточечный впрыск</td>
-		</tr>
-		<tr name="row_20">
-			<td>11.0</td>
-		</tr>
-		<tr name="row_21">
-			<td>Шестерня-рейка</td>
-		</tr>
-		</tbody>
-	</table>
-</div>
-
-<a class="empty_compare_link"></a>
-<div class="compare_table line_3">
-	<table>
-		<tbody>
-		<tr name="row_0">
-			<td>Ford Kuga Impression</td>
-		</tr>
-		<tr name="row_1">
-			<td>
-				<dl class="de-select de-select-filter">
-					<dt class="">2014-2014</dt>
-					<dd>
-						<a href="#">2013-2013</a>
-						<a href="#">2012-2012</a>
-					</dd>
-				</dl>
-			</td>
-		</tr>
-		<tr name="row_2">
-			<td>
-				<dl class="de-select de-select-filter">
-					<dt class="">Кроссовер</dt>
-					<dd>
-						<a href="#">Кроссовер</a>
-						<a href="#">Кроссовер</a>
-					</dd>
-				</dl>
-			</td>
-		</tr>
-		<tr name="row_3">
-			<td>125000 грн</td>
-		</tr>
-		<tr name="row_4">
-			<td>(27)</td>
-		</tr>
-		<tr name="row_5">
-			<td>(27)</td>
-		</tr>
-		</tbody>
-	</table>
-</div>
-
-<a class="empty_compare_link"></a>
-<div class="compare_table line_4">
-	<table>
-		<tbody>
-		<tr name="row_0">
-			<td>Автоматическая</td>
-		</tr>
-		<tr name="row_1">
-			<td><a href="#">4-ступенчатая</a></td>
-		</tr>
-		</tbody>
-	</table>
-</div>
-
-<a class="empty_compare_link"></a>
 <div class="compare_table line_5">
 	<table>
 		<tbody>
@@ -1688,7 +1470,8 @@
 </div>
 
 </div>
-</div><!-- кінець четвертої колонки -->
+</div>
+<!-- кінець четвертої колонки -->
 
 <!-- П*ята порвівняльна колонка -->
 <div class="grid_stabil">
@@ -1703,7 +1486,7 @@
 	<table>
 		<tbody>
 		<tr class="car-dscrpt" name="row_0">
-			<td>Ford Kuga 2.0D 4WD AT (163 лс) Titanium</td>
+			<td>Subaru Forester Impress Mega 2.0D 4WD AT (163 лс) Titanium</td>
 		</tr>
 		<tr name="row_1">
 			<td>
@@ -1740,7 +1523,7 @@
 						<li class=""></li>
 						<li class=""></li>
 					</ul>
-					<span>(212)</span>
+					<span>(334)</span>
 				</div>
 			</td>
 		</tr>
@@ -1762,6 +1545,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_2" href="#">
+	<span>Технические характеристики</span>
+</a>
+
 <div class="compare_table line_2">
 	<table>
 		<tbody>
@@ -1836,10 +1623,14 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_3" href="#" data-id="engine">
+	<span>Двигатель</span>
+</a>
+
 <div class="compare_table line_3">
 	<table>
 		<tbody>
-		<tr name="row_0">
+		<tr class="car-dscrpt" name="row_0">
 			<td>Ford Kuga Impression 2.0D 4WD AT (163 лс) Titanium</td>
 		</tr>
 		<tr name="row_1">
@@ -1878,6 +1669,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_4" href="#" data-id="transmission">
+	<span>Коробка</span>
+</a>
+
 <div class="compare_table line_4">
 	<table>
 		<tbody>
@@ -1892,6 +1687,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_5" href="#" data-id="picking" data-last="">
+	<span>Комплектации</span>
+</a>
+
 <div class="compare_table line_5">
 	<table>
 		<tbody>
@@ -1899,16 +1698,16 @@
 			<td>Touring</td>
 		</tr>
 		<tr name="row_1">
-			<td></td>
+			<td>Легкосплавные</td>
 		</tr>
 		<tr class="even_tr" name="row_2">
-			<td>ABS, EBA, Cruise control, EBD</td>
+			<td>BS, EBD, TCS, EBA</td>
 		</tr>
 		<tr name="row_3">
 			<td>Омыватели высокого давления</td>
 		</tr>
 		<tr class="even_tr" name="row_4">
-			<td></td>
+			<td>Кожаная отделка</td>
 		</tr>
 		<tr name="row_5">
 			<td>Самозатемняющееся салонное зеркало заднего вида, Подогрев, Электропривод</td>
@@ -1917,22 +1716,22 @@
 			<td>Фронтальные, Боковые спереди, Надувные шторки</td>
 		</tr>
 		<tr name="row_7">
-			<td></td>
+			<td>Докатка</td>
 		</tr>
 		<tr name="row_8">
-			<td></td>
+			<td>Камера заднего вида</td>
 		</tr>
 		<tr name="row_9">
-			<td>CD, MP3</td>
+			<td>FM, CD</td>
 		</tr>
 		<tr name="row_10">
 			<td>По вылету</td>
 		</tr>
 		<tr name="row_11">
-			<td>Давления в шинах, Света, Дождя</td>
+			<td>Дождя, Парктроник</td>
 		</tr>
 		<tr name="row_12">
-			<td>Ткань</td>
+			<td>Кожа</td>
 		</tr>
 		<tr name="row_13">
 			<td>Противотуманные фары</td>
@@ -1941,7 +1740,7 @@
 			<td>Климат контроль с разделенной регулировкой</td>
 		</tr>
 		<tr name="row_15">
-			<td></td>
+			<td>Автоматическая регулировка фар</td>
 		</tr>
 		<tr name="row_16">
 			<td>С дистанционным управлением</td>
@@ -1957,7 +1756,8 @@
 </div>
 
 </div>
-</div><!-- кінець п*ятої колонки -->
+</div>
+<!-- кінець п*ятої колонки -->
 
 <!-- Шоста порвівняльна колонка -->
 <div class="grid_stabil">
@@ -1972,7 +1772,7 @@
 	<table>
 		<tbody>
 		<tr class="car-dscrpt" name="row_0">
-			<td>Ford Kuga 2.0D 4WD AT (163 лс) Titanium</td>
+			<td>Subaru Forester Impress Mega 2.0D 4WD AT (163 лс) Titanium</td>
 		</tr>
 		<tr name="row_1">
 			<td>
@@ -2009,7 +1809,7 @@
 						<li class=""></li>
 						<li class=""></li>
 					</ul>
-					<span>(212)</span>
+					<span>(334)</span>
 				</div>
 			</td>
 		</tr>
@@ -2031,6 +1831,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_2" href="#">
+	<span>Технические характеристики</span>
+</a>
+
 <div class="compare_table line_2">
 	<table>
 		<tbody>
@@ -2105,10 +1909,14 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_3" href="#" data-id="engine">
+	<span>Двигатель</span>
+</a>
+
 <div class="compare_table line_3">
 	<table>
 		<tbody>
-		<tr name="row_0">
+		<tr class="car-dscrpt" name="row_0">
 			<td>Ford Kuga Impression 2.0D 4WD AT (163 лс) Titanium</td>
 		</tr>
 		<tr name="row_1">
@@ -2147,6 +1955,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_4" href="#" data-id="transmission">
+	<span>Коробка</span>
+</a>
+
 <div class="compare_table line_4">
 	<table>
 		<tbody>
@@ -2161,6 +1973,10 @@
 </div>
 
 <a class="empty_compare_link"></a>
+<a class="trigger_link" name="line_5" href="#" data-id="picking" data-last="">
+	<span>Комплектации</span>
+</a>
+
 <div class="compare_table line_5">
 	<table>
 		<tbody>
@@ -2168,16 +1984,16 @@
 			<td>Touring</td>
 		</tr>
 		<tr name="row_1">
-			<td></td>
+			<td>Легкосплавные</td>
 		</tr>
 		<tr class="even_tr" name="row_2">
-			<td>ABS, EBA, Cruise control, EBD</td>
+			<td>BS, EBD, TCS, EBA</td>
 		</tr>
 		<tr name="row_3">
 			<td>Омыватели высокого давления</td>
 		</tr>
 		<tr class="even_tr" name="row_4">
-			<td></td>
+			<td>Кожаная отделка</td>
 		</tr>
 		<tr name="row_5">
 			<td>Самозатемняющееся салонное зеркало заднего вида, Подогрев, Электропривод</td>
@@ -2186,22 +2002,22 @@
 			<td>Фронтальные, Боковые спереди, Надувные шторки</td>
 		</tr>
 		<tr name="row_7">
-			<td></td>
+			<td>Докатка</td>
 		</tr>
 		<tr name="row_8">
-			<td></td>
+			<td>Камера заднего вида</td>
 		</tr>
 		<tr name="row_9">
-			<td>CD, MP3</td>
+			<td>FM, CD</td>
 		</tr>
 		<tr name="row_10">
 			<td>По вылету</td>
 		</tr>
 		<tr name="row_11">
-			<td>Давления в шинах, Света, Дождя</td>
+			<td>Дождя, Парктроник</td>
 		</tr>
 		<tr name="row_12">
-			<td>Ткань</td>
+			<td>Кожа</td>
 		</tr>
 		<tr name="row_13">
 			<td>Противотуманные фары</td>
@@ -2210,7 +2026,7 @@
 			<td>Климат контроль с разделенной регулировкой</td>
 		</tr>
 		<tr name="row_15">
-			<td></td>
+			<td>Автоматическая регулировка фар</td>
 		</tr>
 		<tr name="row_16">
 			<td>С дистанционным управлением</td>
@@ -2226,7 +2042,8 @@
 </div>
 
 </div>
-</div><!-- кінець шостої колонки -->
+</div>
+<!-- кінець шостої колонки -->
 
 <!-- Сьома порвівняльна колонка -->
 <div class="grid_stabil">
@@ -2300,6 +2117,7 @@
 </div>
 
 <a class="empty_compare_link"></a>
+
 <div class="compare_table line_2">
 	<table>
 		<tbody>
@@ -2374,6 +2192,7 @@
 </div>
 
 <a class="empty_compare_link"></a>
+
 <div class="compare_table line_3">
 	<table>
 		<tbody>
@@ -2416,6 +2235,7 @@
 </div>
 
 <a class="empty_compare_link"></a>
+
 <div class="compare_table line_4">
 	<table>
 		<tbody>
@@ -2430,6 +2250,7 @@
 </div>
 
 <a class="empty_compare_link"></a>
+
 <div class="compare_table line_5">
 	<table>
 		<tbody>
@@ -2495,10 +2316,12 @@
 </div>
 
 </div>
-</div><!-- кінець сьомої колонки -->
+</div>
+<!-- кінець сьомої колонки -->
 
 </div>
-</div><!-- кінець лівої частини -->
+</div>
+<!-- кінець лівої частини -->
 
 <div class="nothing-inside">
 	Добавьте любой автомобиль к сравнению
