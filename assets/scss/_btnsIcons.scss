@@ -213,11 +213,10 @@
 }
 
 .change-view{
-	// position: relative;//jan.28
-	right: 25px; //jan.28
+	right: 0; //jan.28
 	position: absolute;
 	z-index: 3;
-	top: -55px;
+	top: 0;
 
 	.chv-btn{
 		display: inline-block;

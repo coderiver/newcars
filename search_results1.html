@@ -89,6 +89,11 @@
 	<header class="mainheader">
 		<div class="mainhead-top cf">
 			<a class="logo" href=""><img src="assets/img/logo.png" alt="" /></a>
+			<button type="button" class="mainnav-hamb js-hamb">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 			<ul class="mainnav">
 				<li><a href="">Новости</a></li>
 				<li><a href="">Тест-драйвы</a></li>
@@ -107,235 +112,238 @@
 	</header>
 
 </div>
-<div class="mainheader-bottom">
-<div class="head-offers cf">
-					<span class="offers-icon">
-						<i class="icon-dbcar"></i>
-					</span>
-	<span class="offer-lbl">Найдено 20 автомобилей</span>
-</div>
-
-<div class="header-search-btns">
-	<dl class="de-select de-select-dark">
-		<dt class="">Только в наличии</dt>
-		<dd>
-			<a class="current" href="#">Только в наличии</a>
-			<a href="#">Только с акциями</a>
-		</dd>
-	</dl>
-	<dl class="de-select de-select-dark">
-		<dt class="">Только по популярности</dt>
-		<dd>
-			<a class="current" href="#">Только по популярности</a>
-			<a class="" href="#">Только по цене</a>
-			<a href="#">Только по расходу</a>
-		</dd>
-	</dl>
-	<a class="hsb-item hsb-trigger open_quicksearch" href="">Быстрый поиск</a>
-</div>
-
-<a class="btn-red" href="">Сравнить</a>
-
-<div class="garage-item garage-wrap">
-	<a class="garage-trigg nstart" href="">8 в гараже</a>
-
-	<div class="garage-popup">
-		<ul class="gar-content">
-			<li>
-				<div class="gar-chekbox-wrap">
-					<input type="checkbox" id="p1" />
-					<label for="p1">
-						<div class="car-img" href="">
-							<img src="assets/photo/cars/popup1.png" alt="" />
-						</div>
-						<div class="car-desc">
-							Subaru Forester Impress
-							Mega 2.0D 4WD AT (163 лс)
-						</div>
-
-						<i class="icon-close remove_car"></i>
-					</label>
-
-
-				</div>
-			</li>
-			<li>
-				<div class="gar-chekbox-wrap">
-					<input type="checkbox" id="p2" />
-					<label for="p2">
-						<div class="car-img" href="">
-							<img src="assets/photo/cars/popup2.png" alt="" />
-						</div>
-						<div class="car-desc">
-							Subaru Forester Impress
-							Mega 2.0D 4WD AT (163 лс)
-						</div>
-
-						<i class="icon-close remove_car"></i>
-					</label>
-				</div>
-			</li>
-			<li>
-				<div class="gar-chekbox-wrap">
-					<input type="checkbox" id="p3" />
-					<label for="p3">
-						<div class="car-img" href="">
-							<img src="assets/photo/cars/popup3.png" alt="" />
-						</div>
-						<div class="car-desc">
-							Subaru Forester Impress
-							Mega 2.0D 4WD AT (163 лс)
-						</div>
-
-						<i class="icon-close remove_car"></i>
-					</label>
-				</div>
-			</li>
-		</ul>
-		<div class="garage-footer">
-			<a class="btn-red-transparent" href="">Сравнить выбранные</a>
-			<a class="btn-red" href="">Сравнить все</a>
-		</div>
+<div class="mainheader-bottom-wrap">
+	<div class="mainheader-bottom">
+	<div class="head-offers cf">
+						<span class="offers-icon">
+							<i class="icon-dbcar"></i>
+						</span>
+		<span class="offer-lbl">Найдено 20 автомобилей</span>
 	</div>
-</div>
+	<button type="button" class="bothead-nav-btn js-borthead-s-btn"></button>
+	<div class="header-search-btns">
+		<dl class="de-select de-select-dark">
+			<dt class="">Только в наличии</dt>
+			<dd>
+				<a class="current" href="#">Только в наличии</a>
+				<a href="#">Только с акциями</a>
+			</dd>
+		</dl>
+		<dl class="de-select de-select-dark">
+			<dt class="">Только по популярности</dt>
+			<dd>
+				<a class="current" href="#">Только по популярности</a>
+				<a class="" href="#">Только по цене</a>
+				<a href="#">Только по расходу</a>
+			</dd>
+		</dl>
+		<a class="hsb-item hsb-trigger open_quicksearch" href="">Быстрый поиск</a>
+	</div>
 
+	<a class="btn-red" href="">Сравнить</a>
 
-<div class="quick-search-form">
-	<i class="close-search icon-close"></i>
+	<div class="garage-item garage-wrap">
+		<a class="garage-trigg nstart" href="">8 в гараже</a>
 
-	<div class="filters-block tabs-container">
-		<ul class="filters-nav">
-			<li class="tab-item active"><a data-href="search-filter-all" href="">Все</a></li>
-			<li class="tab-item"><a data-href="search-filter-only" href="">Только в наличии</a></li>
-		</ul>
+		<div class="garage-popup">
+			<ul class="gar-content">
+				<li>
+					<div class="gar-chekbox-wrap">
+						<input type="checkbox" id="p1" />
+						<label for="p1">
+							<div class="car-img" href="">
+								<img src="assets/photo/cars/popup1.png" alt="" />
+							</div>
+							<div class="car-desc">
+								Subaru Forester Impress
+								Mega 2.0D 4WD AT (163 лс)
+							</div>
 
-		<div data-id="search-filter-all" class="filters-row tab-content active">
-			<dl class="de-select de-select-filter">
-				<dt class="">Все марки</dt>
-				<dd>
-					<a href="#">Марка 1</a>
-					<a href="#">Марка 2</a>
-				</dd>
-			</dl>
-			<dl class="de-select disabled de-select-filter">
-				<dt class="">Все модели</dt>
-				<dd>
-					<a href="#">Марка 1</a>
-					<a href="#">Марка 2</a>
-				</dd>
-			</dl>
-			<dl class="de-select disabled de-select-filter">
-				<dt class="">Год не важен</dt>
-				<dd>
-					<a href="#">Марка 1</a>
-					<a href="#">Марка 2</a>
-				</dd>
-			</dl>
-			<dl class="de-select de-select-filter">
-				<dt class="">Цена не важна</dt>
-				<dd>
-					<a href="#">Марка 1</a>
-					<a href="#">Марка 2</a>
-				</dd>
-			</dl>
-			<div class="filters-submit">
-				<a class="btn-red btn-big" href="">Найти</a>
-				<span class="fs-link">или перейти в <a href="">расширенный поиск</a></span>
-			</div>
-
-		</div>
-
-		<div data-id="search-filter-only" class="filters-row tab-content">
-			<dl class="de-select de-select-filter">
-				<dt class="">Все марки</dt>
-				<dd>
-					<a href="#">Марка 1</a>
-					<a href="#">Марка 2</a>
-				</dd>
-			</dl>
-			<dl class="de-select disabled de-select-filter">
-				<dt class="">Все модели</dt>
-				<dd>
-					<a href="#">Марка 1</a>
-					<a href="#">Марка 2</a>
-				</dd>
-			</dl>
-			<dl class="de-select disabled de-select-filter">
-				<dt class="">Год не важен</dt>
-				<dd>
-					<a href="#">Марка 1</a>
-					<a href="#">Марка 2</a>
-				</dd>
-			</dl>
-			<dl class="de-select de-select-filter">
-				<dt class="">Цена не важна</dt>
-				<dd>
-					<a href="#">Марка 1</a>
-					<a href="#">Марка 2</a>
-				</dd>
-			</dl>
-			<div class="filters-submit">
-				<a class="btn-red btn-big" href="">Найти</a>
-				<span class="fs-link">или перейти в <a href="">расширенный поиск</a></span>
-			</div>
-
-		</div>
-
-		<div class="spoil">
-			<div class="spoil-head ">
-				<span class="blue-trigger spoil-trigg">Еще параметры</span>
-			</div>
-			<div class="spoil-wrap">
-				<div class="spoil-content">
-					<div class="filters-row">
-						<dl class="de-select de-select-filter">
-							<dt class="">Кузов</dt>
-							<dd>
-								<a href="#">Марка 1</a>
-								<a href="#">Марка 2</a>
-							</dd>
-						</dl>
-						<dl class="de-select de-select-filter">
-							<dt class="">Коробка</dt>
-							<dd>
-								<a href="#">Марка 1</a>
-								<a href="#">Марка 2</a>
-							</dd>
-						</dl>
-						<dl class="de-select de-select-filter">
-							<dt class="">Топливо</dt>
-							<dd>
-								<a href="#">Марка 1</a>
-								<a href="#">Марка 2</a>
-							</dd>
-						</dl>
-						<dl class="de-select de-select-filter">
-							<dt class="">Привод</dt>
-							<dd>
-								<a href="#">Марка 1</a>
-								<a href="#">Марка 2</a>
-							</dd>
-						</dl>
-						<dl class="de-select de-select-filter">
-							<dt class="">Объем</dt>
-							<dd>
-								<a href="#">Марка 1</a>
-								<a href="#">Марка 2</a>
-							</dd>
-						</dl>
+							<i class="icon-close remove_car"></i>
+						</label>
 
 
 					</div>
+				</li>
+				<li>
+					<div class="gar-chekbox-wrap">
+						<input type="checkbox" id="p2" />
+						<label for="p2">
+							<div class="car-img" href="">
+								<img src="assets/photo/cars/popup2.png" alt="" />
+							</div>
+							<div class="car-desc">
+								Subaru Forester Impress
+								Mega 2.0D 4WD AT (163 лс)
+							</div>
 
-				</div>
+							<i class="icon-close remove_car"></i>
+						</label>
+					</div>
+				</li>
+				<li>
+					<div class="gar-chekbox-wrap">
+						<input type="checkbox" id="p3" />
+						<label for="p3">
+							<div class="car-img" href="">
+								<img src="assets/photo/cars/popup3.png" alt="" />
+							</div>
+							<div class="car-desc">
+								Subaru Forester Impress
+								Mega 2.0D 4WD AT (163 лс)
+							</div>
+
+							<i class="icon-close remove_car"></i>
+						</label>
+					</div>
+				</li>
+			</ul>
+			<div class="garage-footer">
+				<a class="btn-red-transparent" href="">Сравнить выбранные</a>
+				<a class="btn-red" href="">Сравнить все</a>
 			</div>
-
 		</div>
 	</div>
 
+
+	<div class="quick-search-form">
+		<i class="close-search icon-close"></i>
+
+		<div class="filters-block tabs-container">
+			<ul class="filters-nav">
+				<li class="tab-item active"><a data-href="search-filter-all" href="">Все</a></li>
+				<li class="tab-item"><a data-href="search-filter-only" href="">Только в наличии</a></li>
+			</ul>
+
+			<div data-id="search-filter-all" class="filters-row tab-content active">
+				<dl class="de-select de-select-filter">
+					<dt class="">Все марки</dt>
+					<dd>
+						<a href="#">Марка 1</a>
+						<a href="#">Марка 2</a>
+					</dd>
+				</dl>
+				<dl class="de-select disabled de-select-filter">
+					<dt class="">Все модели</dt>
+					<dd>
+						<a href="#">Марка 1</a>
+						<a href="#">Марка 2</a>
+					</dd>
+				</dl>
+				<dl class="de-select disabled de-select-filter">
+					<dt class="">Год не важен</dt>
+					<dd>
+						<a href="#">Марка 1</a>
+						<a href="#">Марка 2</a>
+					</dd>
+				</dl>
+				<dl class="de-select de-select-filter">
+					<dt class="">Цена не важна</dt>
+					<dd>
+						<a href="#">Марка 1</a>
+						<a href="#">Марка 2</a>
+					</dd>
+				</dl>
+				<div class="filters-submit">
+					<a class="btn-red btn-big" href="">Найти</a>
+					<span class="fs-link">или перейти в <a href="">расширенный поиск</a></span>
+				</div>
+
+			</div>
+
+			<div data-id="search-filter-only" class="filters-row tab-content">
+				<dl class="de-select de-select-filter">
+					<dt class="">Все марки</dt>
+					<dd>
+						<a href="#">Марка 1</a>
+						<a href="#">Марка 2</a>
+					</dd>
+				</dl>
+				<dl class="de-select disabled de-select-filter">
+					<dt class="">Все модели</dt>
+					<dd>
+						<a href="#">Марка 1</a>
+						<a href="#">Марка 2</a>
+					</dd>
+				</dl>
+				<dl class="de-select disabled de-select-filter">
+					<dt class="">Год не важен</dt>
+					<dd>
+						<a href="#">Марка 1</a>
+						<a href="#">Марка 2</a>
+					</dd>
+				</dl>
+				<dl class="de-select de-select-filter">
+					<dt class="">Цена не важна</dt>
+					<dd>
+						<a href="#">Марка 1</a>
+						<a href="#">Марка 2</a>
+					</dd>
+				</dl>
+				<div class="filters-submit">
+					<a class="btn-red btn-big" href="">Найти</a>
+					<span class="fs-link">или перейти в <a href="">расширенный поиск</a></span>
+				</div>
+
+			</div>
+
+			<div class="spoil">
+				<div class="spoil-head ">
+					<span class="blue-trigger spoil-trigg">Еще параметры</span>
+				</div>
+				<div class="spoil-wrap">
+					<div class="spoil-content">
+						<div class="filters-row">
+							<dl class="de-select de-select-filter">
+								<dt class="">Кузов</dt>
+								<dd>
+									<a href="#">Марка 1</a>
+									<a href="#">Марка 2</a>
+								</dd>
+							</dl>
+							<dl class="de-select de-select-filter">
+								<dt class="">Коробка</dt>
+								<dd>
+									<a href="#">Марка 1</a>
+									<a href="#">Марка 2</a>
+								</dd>
+							</dl>
+							<dl class="de-select de-select-filter">
+								<dt class="">Топливо</dt>
+								<dd>
+									<a href="#">Марка 1</a>
+									<a href="#">Марка 2</a>
+								</dd>
+							</dl>
+							<dl class="de-select de-select-filter">
+								<dt class="">Привод</dt>
+								<dd>
+									<a href="#">Марка 1</a>
+									<a href="#">Марка 2</a>
+								</dd>
+							</dl>
+							<dl class="de-select de-select-filter">
+								<dt class="">Объем</dt>
+								<dd>
+									<a href="#">Марка 1</a>
+									<a href="#">Марка 2</a>
+								</dd>
+							</dl>
+
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	</div>
 </div>
 
-</div>
 
 
 <div class="head-search-form">
@@ -477,430 +485,432 @@
 <div class="wrap ">
 
 
-<main class="maincontainer cf">
-
-<div class="columns cf">
+<main class="maincontainer columns cf">
 <header class="modelrow-head">
 	<h3>Результаты поиска по Suzuki, двигатель, коробка передач</h3>
 	<a class="btn-red" href="">Расширенный поиск</a>
 
 </header>
+<div class="maincolumn">
 
-<div class="tabs-container cf">
-<div class="change-view cf">
-				<span class="tab-item">
-					<a class="chv-btn chv-btn-tile" data-href="tile" href=""></a>
-				</span>
-				<span class="tab-item active">
-					<a class="chv-btn chv-btn-list" data-href="list" href=""></a>
-				</span>
-</div>
 
-<div class="maincolumn tab-content active" data-id="list">
+	<div class="tabs-container cf">
+	<div class="change-view cf">
+					<span class="tab-item">
+						<a class="chv-btn chv-btn-tile" data-href="tile" href=""></a>
+					</span>
+					<span class="tab-item active">
+						<a class="chv-btn chv-btn-list" data-href="list" href=""></a>
+					</span>
+	</div>
 
+	<div class="tab-content active" data-id="list">
+
+
+		<section class="section no-padding" data-id="prices">
+			<div class="complect-tbl-wrap">
+				<table class="complect-tbl complect-tbl_search">
+					<thead>
+					<tr>
+						<th>Название</th>
+						<th class="sort_by desc">Мощность</th>
+						<th class="sort_by desc">Расход гор/тр.</th>
+						<th>КПП</th>
+						<th>Цена</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>
+							<a href="" class="icon-car green"></a>
+							<a href="" class="td-car-name">Kuga 2.0D 4WD AT (163 лс) Titanium</a>
+							<span class="tag tag-orange">Акции</span>
+						</td>
+						<td><span class="sort_val">168</span> лс</td>
+						<td><span class="sort_val">12.6</span>/6.0</td>
+						<td>Автомат</td>
+						<td>226 567 грн</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="" class="icon-car"></a>
+							<a href="" class="td-car-name">Kuga 2.0D 4WD </a>
+							<span class="tag tag-red">Скидка: 100000грн</span>
+						</td>
+						<td><span class="sort_val">133</span> лс</td>
+						<td><span class="sort_val">11.3</span>/6.0</td>
+						<td>Автомат</td>
+						<td>226 567 грн</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="" class="icon-car"></a>
+							<a href="" class="td-car-name">Kuga 2.0D 4WD </a>
+						</td>
+						<td><span class="sort_val">123</span> лс</td>
+						<td><span class="sort_val">4.3</span>/6.0</td>
+						<td>Автомат</td>
+						<td>226 567 грн</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="" class="icon-car"></a>
+							<a href="" class="td-car-name">Kuga 2.0D 4WD </a>
+							<span class="tag tag-green">Новинка</span>
+						</td>
+						<td><span class="sort_val">113</span> лс</td>
+						<td><span class="sort_val">17.3</span>/6.0</td>
+						<td>Автомат</td>
+						<td>226 567 грн</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="" class="icon-car"></a>
+							<a href="" class="td-car-name">Kuga 2.0D 4WD </a>
+						</td>
+						<td><span class="sort_val">103</span> лс</td>
+						<td><span class="sort_val">0</span>/6.0</td>
+						<td>Автомат</td>
+						<td>226 567 грн</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="" class="icon-car"></a>
+							<a href="" class="td-car-name">Kuga 2.0D 4WD </a>
+						</td>
+						<td><span class="sort_val">173</span> лс</td>
+						<td><span class="sort_val">12.9</span>/6.0</td>
+						<td>Автомат</td>
+						<td>226 567 грн</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</section>
+
+		<div class="nav-paging">
+
+			<nav>
+				<span>1</span>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">...</a>
+				<a href="#">138</a>
+				<a href="#" class="np-last-page"></a>
+			</nav>
+
+		</div>
+
+
+	</div>
+
+
+	<div class="tab-content" data-id="tile">
 
 	<section class="section no-padding" data-id="prices">
 
-		<table class="complect-tbl">
-			<thead>
-			<tr>
-				<th>Название</th>
-				<th class="sort_by desc">Мощность</th>
-				<th class="sort_by desc">Расход гор/тр.</th>
-				<th>КПП</th>
-				<th>Цена</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td>
-					<a href="" class="icon-car green"></a>
-					<a href="" class="td-car-name">Kuga 2.0D 4WD AT (163 лс) Titanium</a>
-					<span class="tag tag-orange">Акции</span>
-				</td>
-				<td><span class="sort_val">168</span> лс</td>
-				<td><span class="sort_val">12.6</span>/6.0</td>
-				<td>Автомат</td>
-				<td>226 567 грн</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="" class="icon-car"></a>
-					<a href="" class="td-car-name">Kuga 2.0D 4WD </a>
-					<span class="tag tag-red">Скидка: 100000грн</span>
-				</td>
-				<td><span class="sort_val">133</span> лс</td>
-				<td><span class="sort_val">11.3</span>/6.0</td>
-				<td>Автомат</td>
-				<td>226 567 грн</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="" class="icon-car"></a>
-					<a href="" class="td-car-name">Kuga 2.0D 4WD </a>
-				</td>
-				<td><span class="sort_val">123</span> лс</td>
-				<td><span class="sort_val">4.3</span>/6.0</td>
-				<td>Автомат</td>
-				<td>226 567 грн</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="" class="icon-car"></a>
-					<a href="" class="td-car-name">Kuga 2.0D 4WD </a>
-					<span class="tag tag-green">Новинка</span>
-				</td>
-				<td><span class="sort_val">113</span> лс</td>
-				<td><span class="sort_val">17.3</span>/6.0</td>
-				<td>Автомат</td>
-				<td>226 567 грн</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="" class="icon-car"></a>
-					<a href="" class="td-car-name">Kuga 2.0D 4WD </a>
-				</td>
-				<td><span class="sort_val">103</span> лс</td>
-				<td><span class="sort_val">0</span>/6.0</td>
-				<td>Автомат</td>
-				<td>226 567 грн</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="" class="icon-car"></a>
-					<a href="" class="td-car-name">Kuga 2.0D 4WD </a>
-				</td>
-				<td><span class="sort_val">173</span> лс</td>
-				<td><span class="sort_val">12.9</span>/6.0</td>
-				<td>Автомат</td>
-				<td>226 567 грн</td>
-			</tr>
-			</tbody>
-		</table>
+	<div class="searchresult-item">
+		<div class="sres-head">
+			<div class="car-img">
+				<img src="assets/photo/post7.jpg" alt="" />
+			</div>
+			<div class="sres-head-content cf">
+				<h3><a href="">Suzuki Grand Vitara, Suv 2013</a></h3>
+
+				<div class="shc-left">
+					<a class="to-compare-link red" href="">Сравнить</a>
+
+					<div class="share-block">
+						<a class="btn-share" href="">Поделиться</a>
+
+						<div class="share-block-socials">
+							<a class="sbs-item is-fb" href=""></a>
+							<a class="sbs-item is-tw" href=""></a>
+							<a class="sbs-item is-vk" href=""></a>
+							<a class="sbs-item is-ok" href=""></a>
+						</div>
+					</div>
+					<div class="rate-block">
+						<ul class="stars-list red">
+							<li class="active"></li>
+							<li class="active"></li>
+							<li class="active"></li>
+							<li class="active"></li>
+							<li class=""></li>
+						</ul>
+						<a href="">5 отзывов</a>
+					</div>
+				</div>
+
+				<div class="shc-right">
+					<span class="price">от 205 567 грн.</span>
+				</div>
+			</div>
+		</div>
+		<div class="spoil sres-spoil">
+			<div class="spoil-head">
+				<a class="spoil-trigg" href="">Показать 2 комплектующие</a>
+			</div>
+			<div class="spoil-wrap">
+				<div class="spoil-content">
+					<ul class="sres-items-list">
+						<li class="sres-item">
+							<div class="sres-item-col">
+								<h5><a href="">Suzuki Grand Vitara 2.4 AT</a></h5>
+
+								<div class="car-desc">
+									Мощность: 163 л.с, Коробка: Автомат, Расход: 18,3/15
+								</div>
+							</div>
+							<div class="sres-item-col">
+								<table>
+									<tr>
+										<td>
+											<a class="icon-car grey" href=""></a>
+											<a class="car-name" href="">JX-X</a>
+											<span class="tag tag-orange">Акции</span>
+											<span class="tag tag-green">Новинка</span>
+										</td>
+										<td>
+											<span class="year">2013</span>
+											<span class="price">от 205 567 грн.</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a class="icon-car grey" href=""></a>
+											<a class="car-name" href="">JX-X</a>
+
+										</td>
+										<td>
+											<span class="year">2013</span>
+											<span class="price">от 205 567 грн.</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a class="icon-car grey" href=""></a>
+											<a class="car-name" href="">JX-X</a>
+											<span class="tag tag-orange">Акции</span>
+										</td>
+										<td>
+											<span class="year">2013</span>
+											<span class="price">от 205 567 грн.</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li class="sres-item">
+							<div class="sres-item-col">
+								<h5><a href="">Suzuki Grand Vitara 2.4 AT</a></h5>
+
+								<div class="car-desc">
+									Мощность: 163 л.с, Коробка: Автомат, Расход: 18,3/15
+								</div>
+							</div>
+							<div class="sres-item-col">
+								<table>
+									<tr>
+										<td>
+											<a class="icon-car grey" href=""></a>
+											<a class="car-name" href="">JX-X</a>
+											<span class="tag tag-orange">Акции</span>
+											<span class="tag tag-green">Новинка</span>
+										</td>
+										<td>
+											<span class="year">2013</span>
+											<span class="price">от 205 567 грн.</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a class="icon-car grey" href=""></a>
+											<a class="car-name" href="">JX-X</a>
+
+										</td>
+										<td>
+											<span class="year">2013</span>
+											<span class="price">от 205 567 грн.</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a class="icon-car grey" href=""></a>
+											<a class="car-name" href="">JX-X</a>
+											<span class="tag tag-orange">Акции</span>
+										</td>
+										<td>
+											<span class="year">2013</span>
+											<span class="price">от 205 567 грн.</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="searchresult-item">
+		<div class="sres-head">
+			<div class="car-img">
+				<img src="assets/photo/post7.jpg" alt="" />
+			</div>
+			<div class="sres-head-content cf">
+				<h3><a href="">Suzuki Grand Vitara, Suv 2013</a></h3>
+
+				<div class="shc-left">
+					<a class="to-compare-link" href="">К сравнению</a>
+
+					<div class="share-block">
+						<a class="btn-share" href="">Поделиться</a>
+
+						<div class="share-block-socials">
+							<a class="sbs-item is-fb" href=""></a>
+							<a class="sbs-item is-tw" href=""></a>
+							<a class="sbs-item is-vk" href=""></a>
+							<a class="sbs-item is-ok" href=""></a>
+						</div>
+					</div>
+					<div class="rate-block">
+						<ul class="stars-list red">
+							<li class="active"></li>
+							<li class="active"></li>
+							<li class="active"></li>
+							<li class="active"></li>
+							<li class=""></li>
+						</ul>
+						<a href="">5 отзывов</a>
+					</div>
+				</div>
+
+				<div class="shc-right">
+					<span class="price">от 205 567 грн.</span>
+				</div>
+			</div>
+		</div>
+		<div class="spoil sres-spoil">
+			<div class="spoil-head">
+				<a class="spoil-trigg" href="">Показать 2 комплектующие</a>
+			</div>
+			<div class="spoil-wrap">
+				<div class="spoil-content">
+					<ul class="sres-items-list">
+						<li class="sres-item">
+							<div class="sres-item-col">
+								<h5><a href="">Suzuki Grand Vitara 2.4 AT</a></h5>
+
+								<div class="car-desc">
+									Мощность: 163 л.с, Коробка: Автомат, Расход: 18,3/15
+								</div>
+							</div>
+							<div class="sres-item-col">
+								<table>
+									<tr>
+										<td>
+											<a class="icon-car grey" href=""></a>
+											<a class="car-name" href="">JX-X</a>
+											<span class="tag tag-orange">Акции</span>
+											<span class="tag tag-green">Новинка</span>
+										</td>
+										<td>
+											<span class="year">2013</span>
+											<span class="price">от 205 567 грн.</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a class="icon-car grey" href=""></a>
+											<a class="car-name" href="">JX-X</a>
+
+										</td>
+										<td>
+											<span class="year">2013</span>
+											<span class="price">от 205 567 грн.</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a class="icon-car grey" href=""></a>
+											<a class="car-name" href="">JX-X</a>
+											<span class="tag tag-orange">Акции</span>
+										</td>
+										<td>
+											<span class="year">2013</span>
+											<span class="price">от 205 567 грн.</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li class="sres-item">
+							<div class="sres-item-col">
+								<h5><a href="">Suzuki Grand Vitara 2.4 AT</a></h5>
+
+								<div class="car-desc">
+									Мощность: 163 л.с, Коробка: Автомат, Расход: 18,3/15
+								</div>
+							</div>
+							<div class="sres-item-col">
+								<table>
+									<tr>
+										<td>
+											<a class="icon-car grey" href=""></a>
+											<a class="car-name" href="">JX-X</a>
+											<span class="tag tag-orange">Акции</span>
+											<span class="tag tag-green">Новинка</span>
+										</td>
+										<td>
+											<span class="year">2013</span>
+											<span class="price">от 205 567 грн.</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a class="icon-car grey" href=""></a>
+											<a class="car-name" href="">JX-X</a>
+
+										</td>
+										<td>
+											<span class="year">2013</span>
+											<span class="price">от 205 567 грн.</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a class="icon-car grey" href=""></a>
+											<a class="car-name" href="">JX-X</a>
+											<span class="tag tag-orange">Акции</span>
+										</td>
+										<td>
+											<span class="year">2013</span>
+											<span class="price">от 205 567 грн.</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
 
 	</section>
 
-	<div class="nav-paging">
-
-		<nav>
-			<span>1</span>
-			<a href="#">2</a>
-			<a href="#">3</a>
-			<a href="#">...</a>
-			<a href="#">138</a>
-			<a href="#" class="np-last-page"></a>
-		</nav>
-
+	</div>
 	</div>
 
 
 </div>
 
-
-<div class="maincolumn tab-content" data-id="tile">
-
-<section class="section no-padding" data-id="prices">
-
-<div class="searchresult-item">
-	<div class="sres-head">
-		<div class="car-img">
-			<img src="assets/photo/post7.jpg" alt="" />
-		</div>
-		<div class="sres-head-content cf">
-			<h3><a href="">Suzuki Grand Vitara, Suv 2013</a></h3>
-
-			<div class="shc-left">
-				<a class="to-compare-link red" href="">Сравнить</a>
-
-				<div class="share-block">
-					<a class="btn-share" href="">Поделиться</a>
-
-					<div class="share-block-socials">
-						<a class="sbs-item is-fb" href=""></a>
-						<a class="sbs-item is-tw" href=""></a>
-						<a class="sbs-item is-vk" href=""></a>
-						<a class="sbs-item is-ok" href=""></a>
-					</div>
-				</div>
-				<div class="rate-block">
-					<ul class="stars-list red">
-						<li class="active"></li>
-						<li class="active"></li>
-						<li class="active"></li>
-						<li class="active"></li>
-						<li class=""></li>
-					</ul>
-					<a href="">5 отзывов</a>
-				</div>
-			</div>
-
-			<div class="shc-right">
-				<span class="price">от 205 567 грн.</span>
-			</div>
-		</div>
-	</div>
-	<div class="spoil sres-spoil">
-		<div class="spoil-head">
-			<a class="spoil-trigg" href="">Показать 2 комплектующие</a>
-		</div>
-		<div class="spoil-wrap">
-			<div class="spoil-content">
-				<ul class="sres-items-list">
-					<li class="sres-item">
-						<div class="sres-item-col">
-							<h5><a href="">Suzuki Grand Vitara 2.4 AT</a></h5>
-
-							<div class="car-desc">
-								Мощность: 163 л.с, Коробка: Автомат, Расход: 18,3/15
-							</div>
-						</div>
-						<div class="sres-item-col">
-							<table>
-								<tr>
-									<td>
-										<a class="icon-car grey" href=""></a>
-										<a class="car-name" href="">JX-X</a>
-										<span class="tag tag-orange">Акции</span>
-										<span class="tag tag-green">Новинка</span>
-									</td>
-									<td>
-										<span class="year">2013</span>
-										<span class="price">от 205 567 грн.</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a class="icon-car grey" href=""></a>
-										<a class="car-name" href="">JX-X</a>
-
-									</td>
-									<td>
-										<span class="year">2013</span>
-										<span class="price">от 205 567 грн.</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a class="icon-car grey" href=""></a>
-										<a class="car-name" href="">JX-X</a>
-										<span class="tag tag-orange">Акции</span>
-									</td>
-									<td>
-										<span class="year">2013</span>
-										<span class="price">от 205 567 грн.</span>
-									</td>
-								</tr>
-							</table>
-						</div>
-					</li>
-					<li class="sres-item">
-						<div class="sres-item-col">
-							<h5><a href="">Suzuki Grand Vitara 2.4 AT</a></h5>
-
-							<div class="car-desc">
-								Мощность: 163 л.с, Коробка: Автомат, Расход: 18,3/15
-							</div>
-						</div>
-						<div class="sres-item-col">
-							<table>
-								<tr>
-									<td>
-										<a class="icon-car grey" href=""></a>
-										<a class="car-name" href="">JX-X</a>
-										<span class="tag tag-orange">Акции</span>
-										<span class="tag tag-green">Новинка</span>
-									</td>
-									<td>
-										<span class="year">2013</span>
-										<span class="price">от 205 567 грн.</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a class="icon-car grey" href=""></a>
-										<a class="car-name" href="">JX-X</a>
-
-									</td>
-									<td>
-										<span class="year">2013</span>
-										<span class="price">от 205 567 грн.</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a class="icon-car grey" href=""></a>
-										<a class="car-name" href="">JX-X</a>
-										<span class="tag tag-orange">Акции</span>
-									</td>
-									<td>
-										<span class="year">2013</span>
-										<span class="price">от 205 567 грн.</span>
-									</td>
-								</tr>
-							</table>
-						</div>
-					</li>
-				</ul>
-
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<div class="searchresult-item">
-	<div class="sres-head">
-		<div class="car-img">
-			<img src="assets/photo/post7.jpg" alt="" />
-		</div>
-		<div class="sres-head-content cf">
-			<h3><a href="">Suzuki Grand Vitara, Suv 2013</a></h3>
-
-			<div class="shc-left">
-				<a class="to-compare-link" href="">К сравнению</a>
-
-				<div class="share-block">
-					<a class="btn-share" href="">Поделиться</a>
-
-					<div class="share-block-socials">
-						<a class="sbs-item is-fb" href=""></a>
-						<a class="sbs-item is-tw" href=""></a>
-						<a class="sbs-item is-vk" href=""></a>
-						<a class="sbs-item is-ok" href=""></a>
-					</div>
-				</div>
-				<div class="rate-block">
-					<ul class="stars-list red">
-						<li class="active"></li>
-						<li class="active"></li>
-						<li class="active"></li>
-						<li class="active"></li>
-						<li class=""></li>
-					</ul>
-					<a href="">5 отзывов</a>
-				</div>
-			</div>
-
-			<div class="shc-right">
-				<span class="price">от 205 567 грн.</span>
-			</div>
-		</div>
-	</div>
-	<div class="spoil sres-spoil">
-		<div class="spoil-head">
-			<a class="spoil-trigg" href="">Показать 2 комплектующие</a>
-		</div>
-		<div class="spoil-wrap">
-			<div class="spoil-content">
-				<ul class="sres-items-list">
-					<li class="sres-item">
-						<div class="sres-item-col">
-							<h5><a href="">Suzuki Grand Vitara 2.4 AT</a></h5>
-
-							<div class="car-desc">
-								Мощность: 163 л.с, Коробка: Автомат, Расход: 18,3/15
-							</div>
-						</div>
-						<div class="sres-item-col">
-							<table>
-								<tr>
-									<td>
-										<a class="icon-car grey" href=""></a>
-										<a class="car-name" href="">JX-X</a>
-										<span class="tag tag-orange">Акции</span>
-										<span class="tag tag-green">Новинка</span>
-									</td>
-									<td>
-										<span class="year">2013</span>
-										<span class="price">от 205 567 грн.</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a class="icon-car grey" href=""></a>
-										<a class="car-name" href="">JX-X</a>
-
-									</td>
-									<td>
-										<span class="year">2013</span>
-										<span class="price">от 205 567 грн.</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a class="icon-car grey" href=""></a>
-										<a class="car-name" href="">JX-X</a>
-										<span class="tag tag-orange">Акции</span>
-									</td>
-									<td>
-										<span class="year">2013</span>
-										<span class="price">от 205 567 грн.</span>
-									</td>
-								</tr>
-							</table>
-						</div>
-					</li>
-					<li class="sres-item">
-						<div class="sres-item-col">
-							<h5><a href="">Suzuki Grand Vitara 2.4 AT</a></h5>
-
-							<div class="car-desc">
-								Мощность: 163 л.с, Коробка: Автомат, Расход: 18,3/15
-							</div>
-						</div>
-						<div class="sres-item-col">
-							<table>
-								<tr>
-									<td>
-										<a class="icon-car grey" href=""></a>
-										<a class="car-name" href="">JX-X</a>
-										<span class="tag tag-orange">Акции</span>
-										<span class="tag tag-green">Новинка</span>
-									</td>
-									<td>
-										<span class="year">2013</span>
-										<span class="price">от 205 567 грн.</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a class="icon-car grey" href=""></a>
-										<a class="car-name" href="">JX-X</a>
-
-									</td>
-									<td>
-										<span class="year">2013</span>
-										<span class="price">от 205 567 грн.</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a class="icon-car grey" href=""></a>
-										<a class="car-name" href="">JX-X</a>
-										<span class="tag tag-orange">Акции</span>
-									</td>
-									<td>
-										<span class="year">2013</span>
-										<span class="price">от 205 567 грн.</span>
-									</td>
-								</tr>
-							</table>
-						</div>
-					</li>
-				</ul>
-
-			</div>
-		</div>
-	</div>
-</div>
-
-</section>
-
-</div>
-</div>
-
-
-</div>
 <aside class="sidebar">
 	<div class="widget side-banner">
 		<img src="assets/photo/banner.png" alt="" />

@@ -1553,6 +1553,17 @@ $(window).on('load', function(){
 		}
 	});
 
+	$('.js-borthead-s-btn').on('click', function() {
+		if ($(this).hasClass('is-open')) {
+			$(this).removeClass('is-open');
+			$('.header-search-btns').slideUp(200);
+		}
+		else {
+			$(this).addClass('is-open');
+			$('.header-search-btns').slideDown(200);
+		}
+	});
+
 
 
 });
