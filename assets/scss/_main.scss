@@ -707,6 +707,10 @@
 						font-size: 16px;
 						.icon-car{
 							margin-right: 9px;
+							@include respond-to(480){
+								margin-bottom: 5px; 
+								margin-top: 5px;
+							}
 						}
 						.car-name{
 							display: inline-block;
@@ -718,10 +722,24 @@
 							&:hover {
 								border-bottom: solid 1px $bluefont;
 							}
+							@include respond-to(480){
+								margin-bottom: 5px; 
+								margin-top: 5px;
+							}
 
+						}
+						.tag{
+							@include respond-to(480){
+								display: block;
+								margin-bottom: 5px; 
+								margin-left: 0; 
+							}
 						}
 						&:first-child{
 							padding-left: 25px;
+							@include respond-to(600){
+								padding-left: 10px; 
+							}
 						}
 						&:last-child{
 							text-align: right;
@@ -737,7 +755,9 @@
 								vertical-align: bottom;
 								color: #999;
 								font-size: 16px;
-
+							}
+							@include respond-to(600){
+								padding-right: 10px; 
 							}
 						}
 					}

@@ -88,6 +88,11 @@
 <header class="mainheader">
 	<div class="mainhead-top cf">
 		<a class="logo" href=""><img src="assets/img/logo.png" alt="" /></a>
+		<button type="button" class="mainnav-hamb js-hamb">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 		<ul class="mainnav">
 			<li><a href="">Новости</a></li>
 			<li><a href="">Тест-драйвы</a></li>
@@ -106,24 +111,39 @@
 </header>
 
 
-<div class="mainheader-bottom">
+<div class="mainheader-bottom-wrap">
+	<div class="mainheader-bottom">
 	<div class="head-offers cf">
-					<span class="offers-icon">
-						<i class="icon-dbcar"></i>
-					</span>
+						<span class="offers-icon">
+							<i class="icon-dbcar"></i>
+						</span>
 		<span class="offer-lbl">Найдено 20 автомобилей</span>
 	</div>
-
+	<button type="button" class="bothead-nav-btn js-borthead-s-btn"></button>
 	<div class="header-search-btns">
-		<a class="hsb-item" href="">Только в наличии</a>
-		<a class="hsb-item" href="">Только по популярности</a>
+		<dl class="de-select de-select-dark">
+			<dt class="">Только в наличии</dt>
+			<dd>
+				<a class="current" href="#">Только в наличии</a>
+				<a href="#">Только с акциями</a>
+			</dd>
+		</dl>
+		<dl class="de-select de-select-dark">
+			<dt class="">Только по популярности</dt>
+			<dd>
+				<a class="current" href="#">Только по популярности</a>
+				<a class="" href="#">Только по цене</a>
+				<a href="#">Только по расходу</a>
+			</dd>
+		</dl>
 		<a class="hsb-item hsb-trigger open_quicksearch" href="">Быстрый поиск</a>
 	</div>
 
 	<a class="btn-red" href="">Сравнить</a>
 
 	<div class="garage-item garage-wrap">
-		<a class="garage-trigg" href="">8 в гараже</a>
+		<a class="garage-trigg nstart" href="">8 в гараже</a>
+
 		<div class="garage-popup">
 			<ul class="gar-content">
 				<li>
@@ -185,18 +205,52 @@
 	</div>
 
 
-
-
 	<div class="quick-search-form">
 		<i class="close-search icon-close"></i>
 
-		<div class="filters-block">
+		<div class="filters-block tabs-container">
 			<ul class="filters-nav">
-				<li class="active"><a href="">Все</a></li>
-				<li><a href="">Только в наличии</a></li>
+				<li class="tab-item active"><a data-href="search-filter-all" href="">Все</a></li>
+				<li class="tab-item"><a data-href="search-filter-only" href="">Только в наличии</a></li>
 			</ul>
 
-			<div class="filters-row">
+			<div data-id="search-filter-all" class="filters-row tab-content active">
+				<dl class="de-select de-select-filter">
+					<dt class="">Все марки</dt>
+					<dd>
+						<a href="#">Марка 1</a>
+						<a href="#">Марка 2</a>
+					</dd>
+				</dl>
+				<dl class="de-select disabled de-select-filter">
+					<dt class="">Все модели</dt>
+					<dd>
+						<a href="#">Марка 1</a>
+						<a href="#">Марка 2</a>
+					</dd>
+				</dl>
+				<dl class="de-select disabled de-select-filter">
+					<dt class="">Год не важен</dt>
+					<dd>
+						<a href="#">Марка 1</a>
+						<a href="#">Марка 2</a>
+					</dd>
+				</dl>
+				<dl class="de-select de-select-filter">
+					<dt class="">Цена не важна</dt>
+					<dd>
+						<a href="#">Марка 1</a>
+						<a href="#">Марка 2</a>
+					</dd>
+				</dl>
+				<div class="filters-submit">
+					<a class="btn-red btn-big" href="">Найти</a>
+					<span class="fs-link">или перейти в <a href="">расширенный поиск</a></span>
+				</div>
+
+			</div>
+
+			<div data-id="search-filter-only" class="filters-row tab-content">
 				<dl class="de-select de-select-filter">
 					<dt class="">Все марки</dt>
 					<dd>
@@ -286,6 +340,7 @@
 
 	</div>
 
+	</div>
 </div>
 
 
@@ -434,13 +489,13 @@
 <div class="columns cf">
 <div class="maincolumn">
 
-
+<div class="change-view cf">
+	<a class="chv-btn chv-btn-tile" href=""></a>
+	<a class="chv-btn chv-btn-list" href=""></a>
+</div>
 
 <section class="section no-padding" data-id="prices">
-	<div class="change-view cf">
-		<a class="chv-btn chv-btn-tile" href=""></a>
-		<a class="chv-btn chv-btn-list" href=""></a>
-	</div>
+	
 
 
 	<div class="searchresult-item">

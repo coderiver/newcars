@@ -1823,6 +1823,7 @@ a {
 .columns{
 	margin-top: 20px;
 	.maincolumn{
+		position: relative;
 		width: 76%;
 		margin-right: 2%;
 		float: left;
@@ -2355,6 +2356,7 @@ a {
 }
 .complect-tbl-wrap {
 	width: 100%; 
+	padding-right: 1px; 
 	overflow-x: auto;
 }
 .complect-tbl{
