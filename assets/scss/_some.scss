@@ -671,6 +671,7 @@ a {
 			top:      10px;
 			@include opacity(0);
 			@include transition(opacity $time);
+			z-index: 2;
 		}
 
 		&:hover, &.active {
@@ -837,7 +838,7 @@ a {
 		@include transition(color $time);
 		&:before {
 			@extend %before;
-			@extend %vam;
+			//@extend %vam;
 			left:                0;
 			position:            absolute;
 			background-position: -521px -106px;
@@ -1345,6 +1346,12 @@ a {
 	.open_full_form{
 		margin-top: 5px;
 		margin-bottom: 30px;
+		@include respond-to(800){
+			padding-left: 27%; 
+		}
+		@include respond-to(480){
+			padding-left: 0; 
+		}
 	}
 
 	.submit-area{
