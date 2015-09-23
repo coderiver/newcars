@@ -2072,7 +2072,7 @@ a {
 	position: relative;
 	margin-left: -20px;
 	width: calc(100% + 20px);
-	@include respond-to(600){
+	@include respond-to(900){
 		margin-left: 0; 
 		width: 100%; 
 	}
@@ -2248,6 +2248,9 @@ a {
 
 	&.no-padding.no-padding.no-padding{
 		padding-left: 20px;
+		@include respond-to(900){
+			padding-left: 0; 
+		}
 		h3{
 			padding-left: 0;
 		}

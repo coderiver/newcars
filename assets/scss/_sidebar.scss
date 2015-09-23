@@ -85,11 +85,11 @@
 			overflow: hidden;
 			color: #212121;
 			font-size: 14px;
-			width: 165px;
+			//width: 165px;
 			@include transition(color $time);
-			@include respond-to(900){
-				width: auto; 
-			}
+			//@include respond-to(900){
+			//	width: auto; 
+			//}
 		}
 	}
 }

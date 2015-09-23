@@ -289,6 +289,9 @@
 	}
 }
 .model-desc-content{
+	@include respond-to(600){
+		text-align: center; 
+	}
 	img{
 		display: inline-block;
 		margin-right: 50px;
@@ -303,8 +306,14 @@
 		display: inline-block;
 		vertical-align: top;
 		padding-top: 35px;
+		@include respond-to(600){
+			max-width: 100%;
+		}
 		&:last-child{
 			max-width: 200px;
+			@include respond-to(600){
+				max-width: 100%;
+			}
 		}
 
 		.lbl{
@@ -378,11 +387,17 @@
 			&:hover{
 				left: -22px;
 			}
+			@include respond-to(900){
+				left: 0;
+			}
 		}
 		.slick-next{
 			right: -17px;
 			&:hover{
 				right: -22px;
+			}
+			@include respond-to(900){
+				right: 0;
 			}
 		}
 	}
