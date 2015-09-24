@@ -124,7 +124,7 @@
 		left: 0;
 		@extend %vam;
 		margin-top: -3px;
-		@include respond-to(760){
+		@include respond-to(1024){
 			top: 0;
 			@include transform(translateY(0));
 		}
@@ -134,7 +134,7 @@
 		text-transform: uppercase;
 		float: left;
 		margin-right: 140px;
-		@include respond-to(760){
+		@include respond-to(1024){
 			display: block;
 			margin-right: 0; 
 			float: none; 
@@ -171,7 +171,7 @@
 				}
 			}
 		}
-		@include respond-to(760){
+		@include respond-to(1024){
 			margin-top: 20px;
 			margin-left: -48px; 
 		}
@@ -244,7 +244,7 @@
 	padding: 0 40px;
 	margin-bottom: 20px;
 	float: left;
-	@include respond-to(760){
+	@include respond-to(1024){
 		width: 50%;
 		padding: 0 20px; 
 	}
@@ -260,7 +260,7 @@
 	border-left: solid 1px #d6d6d6;
 	padding-left: 88px;
 	padding-top: 5px;
-	@include respond-to(760){
+	@include respond-to(1024){
 		width: 50%;
 		padding-left: 30px; 
 	}
@@ -380,7 +380,7 @@
 			height: 25px;
 		}
 		span {
-			@include respond-to(760){
+			@include respond-to(1024){
 				display: block;
 				margin-right: 0; 
 				float: none; 
@@ -397,6 +397,13 @@
 			background-position: -1239px -4px;
 			width: 29px;
 			height: 29px;
+		}
+		span {
+			@include respond-to(1024){
+				display: block;
+				margin-right: 0; 
+				float: none; 
+			}
 		}
 	}
 }
@@ -824,6 +831,7 @@
 
 	.maincolumn {
 		width: 100%;
+		padding-right: 0; 
 
 		.section {
 			padding-left: 0;
@@ -1449,9 +1457,9 @@
 		}
 	}
 
-	.columns {
-		@include clearfix;	
-	}
+	// .columns {
+	// 	@include clearfix;	
+	// }
 }
 
 .de-select-filter {

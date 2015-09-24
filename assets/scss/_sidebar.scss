@@ -1,6 +1,7 @@
 .sidebar{
-	width: 22%;
-	float: left;
+	width: 300px;
+	display: table-cell;
+	vertical-align: top;
 	.side-banner {
 		img {
 			width: 100%;
@@ -8,6 +9,7 @@
 	}
 	@include respond-to(900){
 		width: 100%; 
+		display: block;
 		.side-banner {
 			display: none; 
 		}
