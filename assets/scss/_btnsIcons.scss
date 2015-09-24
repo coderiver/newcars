@@ -183,7 +183,16 @@
 	}
 }
 .tabs-container{
-	position: relative;
+	position: relative; 
+}
+.search-tabs {
+	@include respond-to(900){
+		margin-top: -50px; 
+		.change-view {
+			top: -5px;	
+		}
+	}
+	
 }
 
 .sort_by{

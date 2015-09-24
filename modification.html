@@ -89,6 +89,11 @@
 <header class="mainheader">
 	<div class="mainhead-top cf">
 		<a class="logo" href=""><img src="assets/img/logo.png" alt="" /></a>
+		<button type="button" class="mainnav-hamb js-hamb">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 		<ul class="mainnav">
 			<li><a href="">Новости</a></li>
 			<li><a href="">Тест-драйвы</a></li>
@@ -107,86 +112,33 @@
 </header>
 </div>
 
-<div class="mainheader-bottom">
-	<div class="head-offers cf">
-					<span class="offers-icon white-offers-icon">
-						<img src="assets/photo/cartop.png" alt="" />
-					</span>
-		<span class="offer-lbl">Suzuki Grand Vitara, 2014
-			<br />AT (163 лс) Titanium</span>
-	</div>
-
-	<ul class="bothead-nav">
-		<li class=""><a data-href="wherebuy" href="">Где купить?</a></li>
-		<li><a data-href="characteristics" href="">Характеристика</a></li>
-		<li><a data-href="options" href="">Комплектации</a></li>
-	</ul>
-
-	<a class="btn-red" href="">Сравнить</a>
-
-	<div class="garage-item garage-wrap">
-		<a class="garage-trigg" href="">8 в гараже</a>
-
-		<div class="garage-popup">
-			<ul class="gar-content">
-				<li>
-					<div class="gar-chekbox-wrap">
-						<input type="checkbox" id="p1" />
-						<label for="p1">
-							<div class="car-img" href="">
-								<img src="assets/photo/cars/popup1.png" alt="" />
-							</div>
-							<div class="car-desc">
-								Subaru Forester Impress
-								Mega 2.0D 4WD AT (163 лс)
-							</div>
-
-							<i class="icon-close remove_car"></i>
-						</label>
-
-
-					</div>
-				</li>
-				<li>
-					<div class="gar-chekbox-wrap">
-						<input type="checkbox" id="p2" />
-						<label for="p2">
-							<div class="car-img" href="">
-								<img src="assets/photo/cars/popup2.png" alt="" />
-							</div>
-							<div class="car-desc">
-								Subaru Forester Impress
-								Mega 2.0D 4WD AT (163 лс)
-							</div>
-
-							<i class="icon-close remove_car"></i>
-						</label>
-					</div>
-				</li>
-				<li>
-					<div class="gar-chekbox-wrap">
-						<input type="checkbox" id="p3" />
-						<label for="p3">
-							<div class="car-img" href="">
-								<img src="assets/photo/cars/popup3.png" alt="" />
-							</div>
-							<div class="car-desc">
-								Subaru Forester Impress
-								Mega 2.0D 4WD AT (163 лс)
-							</div>
-
-							<i class="icon-close remove_car"></i>
-						</label>
-					</div>
-				</li>
-			</ul>
-			<div class="garage-footer">
-				<a class="btn-red-transparent" href="">Сравнить выбранные</a>
-				<a class="btn-red" href="">Сравнить все</a>
-			</div>
+<div class="mainheader-bottom-wrap">
+	<div class="mainheader-bottom">
+		<div class="head-offers cf">
+						<span class="offers-icon">
+							<i class="icon-dbcar"></i>
+						</span>
 		</div>
-	</div>
 
+	<!-- next OK -->
+		<button type="button" class="bothead-nav-btn js-borthead-btn"></button>
+		<ul class="bothead-nav">
+
+			<li class="current"><a class="car-body-icon" data-href="car-body" href="">Кузов</a></li>
+			<li><a class="brand-icon" data-href="brand" href="">Марка</a></li>
+			<li><a class="params-icon" data-href="params" href="">Параметры</a></li>
+			<li><a class="money-icon" data-href="money" href="">Финансы</a></li>
+		</ul>
+
+		<a class="btn-red" href="">Сравнить</a>
+
+		<div class="garage-item garage-wrap">
+			<a class="garage-trigg" href="">8 в гараже</a>
+		</div>
+
+		<a class="btn-red show-total-amount" href="">Показать (<span>3425</span>)</a>
+
+	</div>
 </div>
 
 

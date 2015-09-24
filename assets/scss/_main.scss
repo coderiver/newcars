@@ -254,11 +254,6 @@
 			margin-bottom: 10px;
 		}
 	}
-	@include respond-to(760){
-		span, .to-compare-link {
-			margin-bottom: 10px;
-		}
-	}
 	@include respond-to(568){
 		@include clearfix;
 		img {
@@ -289,6 +284,9 @@
 	}
 }
 .model-desc-content{
+	@include respond-to(900){
+		font-size: 0;  
+	}
 	@include respond-to(600){
 		text-align: center; 
 	}
@@ -299,6 +297,12 @@
 		@include respond-to(960){
 			margin-right: 0; 
 		}
+		@include respond-to(900){
+			display: block;
+		}
+		@include respond-to(900){
+			margin: 0 auto; 
+		}
 	}
 	.mdc-item{
 		width: 100%; 
@@ -306,30 +310,50 @@
 		display: inline-block;
 		vertical-align: top;
 		padding-top: 35px;
+		@include respond-to(900){
+			max-width: 50%;
+		}
 		@include respond-to(600){
 			max-width: 100%;
+			padding-top: 20px;
 		}
 		&:last-child{
 			max-width: 200px;
+			@include respond-to(900){
+				max-width: 50%;
+			}
 			@include respond-to(600){
 				max-width: 100%;
 			}
 		}
 
 		.lbl{
+			width: 270px; 
 			color: #212121;
 			font-size: 16px;
 			display: block;
 			margin-bottom: 5px;
 			margin-top: 25px;
+			@include respond-to(600){
+				width: 100%;
+			}
 		}
 
 		.price{
 			display: block;
+			width: 270px;
 			color: #000;
 			font-size: 25px;
+			@include respond-to(600){
+				width: 100%;
+			}
 		}
-
+		.de-select-filter {
+			@include respond-to(600){
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
 		.colors{
 			li{
 				display: inline-block;
@@ -480,21 +504,23 @@
 
 .modif-block{
 	.model-description.model-description.model-description{
-//		border-bottom: none;
 		h3{
 			padding-left: 0;
+			@include respond-to(900){
+				width: 100%;
+				margin-right: 0;  
+			}
 		}
 		.lbl{
-			// color: $bluefont;//feb2
 			color: #212121;
 		}
 
 		.de-select-filter{
 			width: 270px;
 			margin-top: 25px;
-			dt{
-				// padding-top: 12px;
-				// padding-bottom: 12px;
+			@include respond-to(600){
+				width: 100%;
+				margin-left: 0;  
 			}
 		}
 	}

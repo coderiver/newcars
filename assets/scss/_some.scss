@@ -2469,7 +2469,13 @@ a {
 					background:#2f2f2f;
 					border-right-color: #2f2f2f;
 				}
-
+				@include respond-to(480){
+					font-size: 16px; 
+					padding: 16px 10px;
+					.trigger_link {
+						font-size: 16px;
+					}
+				}
 			}
 		}
 	}
@@ -2491,6 +2497,10 @@ a {
 				}
 				&:last-child{
 
+				}
+				@include respond-to(480){
+					padding: 19px 0 19px 5px;
+					font-size: 12px; 
 				}
 			}
 			&:nth-child(even){
